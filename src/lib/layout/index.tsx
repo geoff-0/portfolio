@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
     <Box
       margin="0 auto"
       transition="0.5s ease-out"
-      bgColor={"background.dark"}
+      bgColor={useColorModeValue("background.light", "background.dark")}
       minH="100vh"
     >
       <Header />

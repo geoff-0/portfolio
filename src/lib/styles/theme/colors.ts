@@ -1,20 +1,17 @@
-import type { DeepPartial, Theme } from "@chakra-ui/react";
+import { DeepPartial, Theme, useColorModeValue } from "@chakra-ui/react";
 
 /** extend additional color here */
 const extendedColors = {
   brand: {
-    primary: "#519ebd",
-    200: "",
-    300: "",
-    400: "",
-    500: "",
-    600: "",
-    700: "",
-    800: "",
-    900: "",
+    primary: "#1A9FFF",
   },
   background: {
+    light: "white",
     dark: "#0d1017",
+  },
+  text: {
+    light: "#1A202C",
+    dark: "#ffffff",
   },
 };
 

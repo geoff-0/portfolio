@@ -1,9 +1,10 @@
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex, Grid, Heading, Text } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 
 import CTASection from "lib/components/samples/CTASection";
 import SomeImage from "lib/components/samples/SomeImage";
-import SomeText from "lib/components/samples/SomeText";
+import Intro from "lib/components/Intro";
+import Projects from "lib/components/projects/Projects";
 
 const Home = () => {
   return (
@@ -16,10 +17,11 @@ const Home = () => {
       mb={8}
       w="full"
     >
-      <NextSeo title="Home" />
-      <SomeText />
-      <SomeImage />
-      <CTASection />
+      <NextSeo title="Geoffrey Perez" />
+
+      <Intro mb="20rem" mt="8rem" />
+
+      <Projects />
     </Flex>
   );
 };
