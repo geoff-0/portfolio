@@ -26,19 +26,19 @@ export default function NavLink(props: {
       p="15px"
       fill={
         props.active == props.label
-          ? "#1A9FFF"
+          ? "brand.primary"
           : colorMode == "light"
           ? "text.light"
           : "text.dark"
       }
       color={
         props.active == props.label
-          ? "#1A9FFF"
+          ? "brand.primary"
           : colorMode == "light"
           ? "text.light"
           : "text.dark"
       }
-      _hover={{ color: "#1A9FFF", fill: "#1A9FFF" }}
+      _hover={{ color: "brand.primary", fill: "brand.primary" }}
       onClick={() => props.setActive(props.label)}
     >
       <Flex direction="column" gap="5px">

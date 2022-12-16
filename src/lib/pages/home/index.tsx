@@ -15,7 +15,8 @@ const Home = () => {
       minHeight="70vh"
       gap={4}
       mb={8}
-      w="full"
+      w={{ base: "95%", md: "85%", lg: "60%" }}
+      mx="auto"
     >
       <NextSeo title="Geoffrey Perez" />
 

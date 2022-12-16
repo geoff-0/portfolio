@@ -2,7 +2,7 @@ import { Box, Heading, Text } from "@chakra-ui/react";
 
 export default function Intro(props: any) {
   return (
-    <Box textAlign="left" w="60%" {...props}>
+    <Box textAlign="left" {...props}>
       <Text color="#1A9FFF" fontSize="xl">
         Hey.
       </Text>
