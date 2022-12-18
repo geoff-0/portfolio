@@ -29,7 +29,6 @@ export default function Contact() {
       </HStack>
 
       <Flex gap="1.5rem" direction="column">
-        <HStack gap="10px"></HStack>
         <Text color={colorMode == "light" ? "gray.600" : "gray.400"}>
           {"I am actively seeking employment."}
           <br />
