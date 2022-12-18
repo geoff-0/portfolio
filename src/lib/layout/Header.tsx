@@ -44,8 +44,8 @@ const Header = () => {
       w="full"
       align="center"
       top={scrollDir == "up" ? "0" : "-300"}
-      p={scrollPos == 0 ? "60px" : "10px"}
-      px={scrollPos !== 0 && "2rem"}
+      px={scrollPos == 0 ? "60px" : "30px"}
+      py={scrollPos == 0 ? "60px" : "10px"}
       position="sticky"
       transition="top .3s, padding .3s, background-color .5s"
       zIndex={100}
