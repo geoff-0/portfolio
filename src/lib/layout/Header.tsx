@@ -30,7 +30,7 @@ const Header = () => {
     About: { id: "about", icon: AboutIcon },
     "Tech Stack": { id: "tech-stack", icon: StackIcon },
     Projects: { id: "projects", icon: DualGearsIcon },
-    Contact: { id: "contact", icon: AboutIcon },
+    Contact: { id: "contact", icon: MailIcon },
   };
 
   const [active, setActive] = useState("Home");

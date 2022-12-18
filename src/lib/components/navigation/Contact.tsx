@@ -14,6 +14,8 @@ import { SkipNavContent } from "@chakra-ui/skip-nav";
 
 import NextLink from "next/link";
 
+import MailIcon from "lib/icons/MailIcon";
+
 export default function Contact() {
   const { colorMode } = useColorMode();
 
@@ -38,7 +40,7 @@ export default function Contact() {
 
         <NextLink href="mailto:contact.geoffrey.perez@gmail.com" passHref>
           <Link _hover={{ textDecoration: "none" }}>
-            <Button size="md" mx="auto" rounded="md">
+            <Button leftIcon={<MailIcon />} size="md" mx="auto" rounded="md">
               Contact me{" "}
             </Button>
           </Link>
