@@ -34,7 +34,7 @@ export default function Contact() {
           {"I am actively seeking employment."}
           <br />
           {
-            "If you feel I would be a good fit for your needs, please feel free to contact me with the button below. I will be more than glad to talk to you."
+            "If you feel I would be a good fit for your needs, please feel free to contact me with the button below. I would be more than glad to talk to you."
           }
         </Text>
 

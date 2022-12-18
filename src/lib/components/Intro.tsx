@@ -11,7 +11,7 @@ export default function Intro(props: any) {
 
       <Heading as="h1" size={{ base: "2xl", md: "4xl" }} mb="2.5rem">
         {"I'm Geoffrey Perez,"}
-        <br />a Software Engineer.
+        <br />a Full-stack Developer.
       </Heading>
 
       <Text
