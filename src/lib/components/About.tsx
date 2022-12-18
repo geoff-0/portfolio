@@ -34,7 +34,7 @@ export default function About() {
         </HStack>
         <Text color={colorMode == "light" ? "gray.600" : "gray.400"}>
           {
-            "Hey there! My name is Geoffrey and I am a self-taught programmer. From Discord bots, to Harvard's CS50, to tech documentation, and googling terms I wasn't familiar with, I have sought and used every resource within my reach to learn what is needed to build responsive, accessible, and interactive applications."
+            "Hey there! My name is Geoffrey, and I am a self-taught programmer. From Harvard's CS50 to tech documentation, I have sought and used every resource to learn what is needed to become an industry-ready developer. Today I can build responsive, accessible, and interactive applications."
           }
         </Text>
       </Flex>
