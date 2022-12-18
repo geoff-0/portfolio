@@ -1,29 +1,28 @@
-import {
-  Button,
-  Flex,
-  Text,
-  IconProps,
-  Box,
-  Icon,
-  useColorMode,
-  textDecoration,
-} from "@chakra-ui/react";
-import HomeIcon from "lib/icons/HomeIcon";
-import { ReactNode, SVGProps } from "react";
+import { Button, Flex, Text, Box, Icon, useColorMode } from "@chakra-ui/react";
+import { SkipNavLink } from "@chakra-ui/skip-nav";
+import { useEffect } from "react";
+
+import NextLink from "next/link";
 
 export default function NavLink(props: {
   icon: any;
+  id: string;
   label: string;
   active: string;
   setActive: Function;
+  onClose?: any;
 }) {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <Button
       variant="unstyled"
+      as={NextLink}
+      scrollBehavior="smooth"
+      href={`#${props.id}`}
       h="max-content"
       p="15px"
+      scroll={false}
       fill={
         props.active == props.label
           ? "brand.primary"
@@ -38,16 +37,16 @@ export default function NavLink(props: {
           ? "text.light"
           : "text.dark"
       }
+      textAlign="center"
       _hover={{ color: "brand.primary", fill: "brand.primary" }}
-      onClick={() => props.setActive(props.label)}
+      onClick={() => {
+        props.setActive(props.label);
+        if (props.onClose) props.onClose();
+      }}
     >
-      <Flex direction="column" gap="5px">
-        <Box mx="auto">
-          <Icon as={props.icon} boxSize="25px" />
-        </Box>
+      <Icon as={props.icon} boxSize="25px" mb="5px" />
 
-        <Text fontSize="15px">{props.label}</Text>
-      </Flex>
+      <Text fontSize="15px">{props.label}</Text>
     </Button>
   );
 }

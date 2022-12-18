@@ -1,10 +1,12 @@
 import { Box, Flex, Grid, Heading, Text } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 
-import CTASection from "lib/components/samples/CTASection";
 import SomeImage from "lib/components/samples/SomeImage";
 import Intro from "lib/components/Intro";
-import Projects from "lib/components/projects/Projects";
+import Projects from "lib/components/Projects";
+import TechStack from "lib/components/TechStack";
+import About from "lib/components/About";
+import Contact from "lib/components/navigation/Contact";
 
 const Home = () => {
   return (
@@ -13,16 +15,23 @@ const Home = () => {
       alignItems="center"
       justifyContent="center"
       minHeight="70vh"
-      gap={4}
+      gap={"10rem"}
       mb={8}
-      w={{ base: "95%", md: "85%", lg: "60%" }}
+      w={{ base: "85%", lg: "67%" }}
       mx="auto"
+      overflow="hidden"
     >
       <NextSeo title="Geoffrey Perez" />
 
-      <Intro mb="20rem" mt="8rem" />
+      <Intro mb="17rem" py="9rem" />
+
+      <About />
+
+      <TechStack />
 
       <Projects />
+
+      <Contact />
     </Flex>
   );
 };

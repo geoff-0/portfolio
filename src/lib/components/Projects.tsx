@@ -9,9 +9,13 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import { nanoid } from "nanoid";
-import HR from "../HR";
-import ReactToolTip from "../tech-icons/ReactToolTip";
-import ProjectCard from "./ProjectCard";
+import ChakraTooltip from "./tech-stack/tech-icons/tooltips/ChakraTooltip";
+import NextTooltip from "./tech-stack/tech-icons/tooltips/NextTooltip";
+import ReactToolTip from "./tech-stack/tech-icons/tooltips/ReactTooltip";
+import ReduxTooltip from "./tech-stack/tech-icons/tooltips/ReduxTooltip";
+import TSToolTip from "./tech-stack/tech-icons/tooltips/TSTooltip";
+import ProjectCard from "./projects/ProjectCard";
+import { SkipNavContent } from "@chakra-ui/skip-nav";
 
 export default function Projects() {
   const projects = {
@@ -21,7 +25,7 @@ export default function Projects() {
       image: "/portfolio-snapshot.png",
       repoLink: "https://github.com/geoday03/portfolio",
       demoLink: "https://geoday.dev",
-      techStack: [ReactToolTip],
+      techStack: [ReactToolTip, TSToolTip, NextTooltip, ChakraTooltip],
     },
     feigne: {
       title: "Feigne",
@@ -29,14 +33,20 @@ export default function Projects() {
       image: "/feigne-snapshot.png",
       repoLink: "https://github.com/geoday03/feigne",
       demoLink: "https://feigne.vercel.app",
-      techStack: [ReactToolTip],
+      techStack: [
+        ReactToolTip,
+        TSToolTip,
+        NextTooltip,
+        ReduxTooltip,
+        ChakraTooltip,
+      ],
     },
   };
 
   type projKey = keyof typeof projects;
 
   return (
-    <Flex textAlign="left" flexDir="column">
+    <Flex textAlign="left" flexDir="column" w="full" id="projects">
       <HStack gap="3rem">
         <Heading as="h2" py="40px">
           Projects
@@ -44,7 +54,7 @@ export default function Projects() {
         <Divider />
       </HStack>
 
-      <Flex direction="column" gap="3rem">
+      <Flex direction="column" gap={{ base: "5rem", md: "3rem" }}>
         {Object.keys(projects).map((key, i) => (
           <ProjectCard
             key={nanoid()}

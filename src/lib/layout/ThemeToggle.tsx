@@ -6,7 +6,8 @@ import {
   Box,
   Icon,
   useColorMode,
-  useColorModeValue,
+  Stack,
+  Spacer,
 } from "@chakra-ui/react";
 import HomeIcon from "lib/icons/HomeIcon";
 import MoonIcon from "lib/icons/MoonIcon";
@@ -20,20 +21,20 @@ export default function ThemeToggle(props: any) {
     <Button
       h="max-content"
       p="15px"
+      textAlign="center"
       onClick={toggleColorMode}
       variant="unstyled"
       flexDirection="column"
-      fill={useColorModeValue("text.light", "text.dark")}
+      fill={colorMode == "light" ? "text.light" : "text.dark"}
       _hover={{
-        color: useColorModeValue("#1A9FFF", "orange.300"),
-        fill: useColorModeValue("#1A9FFF", "orange.300"),
+        color: colorMode == "light" ? "#1A9FFF" : "orange.300",
+        fill: colorMode == "light" ? "#1A9FFF" : "orange.300",
       }}
       {...props}
     >
       <Icon
         as={colorMode === "light" ? MoonIcon : SunIcon}
         boxSize="25px"
-        mx="auto"
         mb="5px"
       />
 

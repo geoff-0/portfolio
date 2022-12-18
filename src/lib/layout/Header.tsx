@@ -1,12 +1,8 @@
 import {
   Box,
-  Button,
-  Center,
   Flex,
-  Heading,
-  Spacer,
   Text,
-  Tooltip,
+  useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react";
 
@@ -18,44 +14,79 @@ import { Link } from "@chakra-ui/react";
 import ThemeToggle from "./ThemeToggle";
 import HomeIcon from "lib/icons/HomeIcon";
 import DualGearsIcon from "lib/icons/DualGearsIcon";
-import GearThinIcon from "lib/icons/GearThinIcon";
 import NavLink from "lib/components/navigation/NavLink";
 import { nanoid } from "nanoid";
 import StackIcon from "lib/icons/StackIcon";
 import MailIcon from "lib/icons/MailIcon";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useScrollDirection } from "lib/hooks/useScrollDirection";
+import useScrollPosition from "lib/hooks/useScrollPosition";
+import AboutIcon from "lib/icons/AboutIcon";
+import MobileNavigation from "./MobileNavigation";
 
 const Header = () => {
   const navLinks = {
-    Home: { href: "/", icon: HomeIcon },
-    "Tech Stack": { href: "/", icon: StackIcon },
-    Projects: { href: "/", icon: DualGearsIcon },
-    Contact: { href: "/", icon: MailIcon },
+    Home: { id: "home", icon: HomeIcon },
+    About: { id: "about", icon: AboutIcon },
+    "Tech Stack": { id: "tech-stack", icon: StackIcon },
+    Projects: { id: "projects", icon: DualGearsIcon },
+    Contact: { id: "contact", icon: AboutIcon },
   };
 
   const [active, setActive] = useState("Home");
 
+  const scrollDir = useScrollDirection();
+  const scrollPos = useScrollPosition();
+
   return (
-    <Flex as="header" width="full" h="10vh" align="center" p="60px">
-      <Text fontSize="lg" fontWeight="semibold" letterSpacing="wide">
-        geoday.dev
-      </Text>
+    <Flex
+      as="header"
+      w="full"
+      align="center"
+      top={scrollDir == "up" ? "0" : "-300"}
+      p={scrollPos == 0 ? "60px" : "10px"}
+      position="sticky"
+      transition="top .3s, padding .3s, background-color .5s"
+      zIndex={100}
+      boxShadow={scrollPos == 0 ? "none" : "xl"}
+      bgColor={useColorModeValue("background.light", "background.dark")}
+    >
+      <NextLink href="https://geoday.dev" passHref>
+        <Link
+          transition="color .5s"
+          _hover={{ textDecoration: "none", color: "brand.primary" }}
+        >
+          <Text
+            fontSize={{ base: "sm", md: "lg" }}
+            fontWeight="semibold"
+            letterSpacing="wide"
+          >
+            geoday.dev
+          </Text>
+        </Link>
+      </NextLink>
 
       <Flex ml="auto" gap="1rem">
         {Object.keys(navLinks).map((k, i) => {
           return (
-            <NavLink
-              key={nanoid()}
-              label={k}
-              icon={navLinks[k as keyof typeof navLinks].icon}
-              active={active}
-              setActive={setActive}
-            />
+            <Box display={{ base: "none", md: "flex" }} key={nanoid()}>
+              <NavLink
+                label={k}
+                icon={navLinks[k as keyof typeof navLinks].icon}
+                id={navLinks[k as keyof typeof navLinks].id}
+                active={active}
+                setActive={setActive}
+              />
+            </Box>
           );
         })}
 
-        <ThemeToggle p="15px" />
+        <Box display={{ base: "none", md: "flex" }}>
+          <ThemeToggle />
+        </Box>
       </Flex>
+
+      <MobileNavigation display={{ base: "flex", md: "none" }} />
     </Flex>
   );
 };

@@ -12,18 +12,14 @@ import {
   Link,
   HStack,
   Icon,
+  useColorMode,
 } from "@chakra-ui/react";
-
-import CTASection from "../samples/CTASection";
 
 import NextLink from "next/link";
 
 import { AiFillGithub } from "react-icons/ai";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import ReactIcon from "lib/icons/ReactIcon";
-import ReactToolTip from "../tech-icons/ReactToolTip";
-import TSToolTip from "../tech-icons/TSTooltip";
-import NextTooltip from "../tech-icons/NextTooltip";
+import { nanoid } from "nanoid";
 
 export default function ProjectCard(props: {
   title: string;
@@ -31,8 +27,10 @@ export default function ProjectCard(props: {
   image: string;
   repoLink: string;
   demoLink: string;
-  techStack: [];
+  techStack: any;
 }) {
+  const { colorMode } = useColorMode();
+
   return (
     <Card
       textAlign="left"
@@ -40,68 +38,82 @@ export default function ProjectCard(props: {
       rounded="sm"
       direction={{ base: "column", md: "row" }}
       p="20px"
-      gap="3rem"
+      w="full"
+      gap={{ base: "1rem", md: "4rem" }}
     >
-      <NextLink passHref href={props.demoLink}>
-        <Link target="_blank">
+      <NextLink passHref href={props.demoLink} target="_blank">
+        <Link>
           <Image
             alt="placeholder"
             src={props.image}
+            boxSize="lg"
             objectFit="cover"
-            maxW="580px"
-            opacity=".75"
+            opacity="1"
             transition="opacity .5s"
-            _hover={{ opacity: 1 }}
+            _hover={{ opacity: 0.75 }}
             rounded="lg"
+            maxH="360px"
           />
         </Link>
       </NextLink>
 
-      <Divider orientation="vertical" />
-      <Stack>
-        <CardBody minW="30rem">
+      <Stack gap={{ base: "3rem", md: "0" }}>
+        <CardBody>
           <Box>
-            <Heading as="h2" mr="auto" mb="1rem">
-              <NextLink href={props.demoLink} passHref>
-                <Link
-                  transition="color .5s"
-                  _hover={{ textDecor: "none", color: "brand.primary" }}
-                >
+            <NextLink href={props.demoLink} passHref target="_blank">
+              <Link
+                transition="color .5s"
+                _hover={{ textDecor: "none", color: "brand.primary" }}
+              >
+                <Heading as="h2" mr="auto" mb="1rem">
                   {props.title}
-                </Link>
-              </NextLink>
-            </Heading>
+                </Heading>
+              </Link>
+            </NextLink>
 
-            <HStack mb="1rem">
-              <ReactToolTip />
-              <TSToolTip />
-              <NextTooltip />
+            <HStack mb="1rem" gap="5px">
+              {props.techStack.map((e: any) => (
+                <Box as={e} key={nanoid()} />
+              ))}
             </HStack>
 
-            <Text color="gray.500">{props.description}</Text>
+            <Text color={colorMode == "light" ? "gray.600" : "gray.400"}>
+              {props.description}
+            </Text>
           </Box>
         </CardBody>
+
         <CardFooter gap="1rem">
           <Button
-            as={NextLink}
-            href={props.repoLink}
-            passHref
-            target="_blank"
+            display={{ base: "none", md: "flex" }}
             leftIcon={<AiFillGithub />}
             size="sm"
           >
-            Open in Github
+            <NextLink href={props.repoLink} passHref target="_blank">
+              <Link _hover={{ textDecoration: "none" }}>Open in Github</Link>
+            </NextLink>
+          </Button>
+
+          <Button display={{ base: "flex", md: "none" }} size="sm">
+            <NextLink href={props.repoLink} passHref target="_blank">
+              <Link _hover={{ textDecoration: "none" }}>Open in Github</Link>
+            </NextLink>
           </Button>
 
           <Button
-            as={NextLink}
-            href={props.demoLink}
-            passHref
-            target="_blank"
+            display={{ base: "none", md: "flex" }}
             leftIcon={<ExternalLinkIcon />}
             size="sm"
           >
-            Live Demo
+            <NextLink href={props.demoLink} passHref target="_blank">
+              <Link _hover={{ textDecoration: "none" }}>Live Demo</Link>
+            </NextLink>
+          </Button>
+
+          <Button display={{ base: "flex", md: "none" }} size="sm">
+            <NextLink href={props.demoLink} passHref target="_blank">
+              <Link _hover={{ textDecoration: "none" }}>Live Demo</Link>
+            </NextLink>
           </Button>
         </CardFooter>
       </Stack>
