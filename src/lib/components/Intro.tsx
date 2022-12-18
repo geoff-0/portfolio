@@ -22,7 +22,7 @@ export default function Intro(props: any) {
         <br />
 
         {
-          "I place an emphasis on user experience and create intuitive user interfaces."
+          "I place emphasis on user experience and create intuitive user interfaces."
         }
       </Text>
     </Box>
