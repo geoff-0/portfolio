@@ -1,4 +1,4 @@
-const APP_NAME = "feigne";
+const APP_NAME = "portfolio";
 
 const Meta = () => {
   return (
