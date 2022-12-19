@@ -6,7 +6,7 @@ import Intro from "lib/components/Intro";
 import Projects from "lib/components/Projects";
 import TechStack from "lib/components/TechStack";
 import About from "lib/components/About";
-import Contact from "lib/components/navigation/Contact";
+import Contact from "lib/components/Contact";
 
 const Home = () => {
   return (
