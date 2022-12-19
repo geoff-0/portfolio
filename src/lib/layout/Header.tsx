@@ -38,18 +38,20 @@ const Header = () => {
   const scrollDir = useScrollDirection();
   const scrollPos = useScrollPosition();
 
+  const padding = useBreakpointValue({ base: "30px", md: "60px" });
+
   return (
     <Flex
       as="header"
       w="full"
       align="center"
       top={scrollDir == "up" ? "0" : "-300"}
-      px={scrollPos == 0 ? "60px" : "30px"}
+      px={scrollPos == 0 ? padding : "30px"}
       py={scrollPos == 0 ? "60px" : "10px"}
       position="sticky"
       transition="top .3s, padding .3s, background-color .5s"
       zIndex={100}
-      boxShadow={scrollPos == 0 ? "none" : "xl"}
+      boxShadow={scrollPos == 0 ? "none" : "sm"}
       bgColor={useColorModeValue("background.light", "background.dark")}
     >
       <NextLink href="https://geoday.dev" passHref>

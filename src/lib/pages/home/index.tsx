@@ -23,7 +23,7 @@ const Home = () => {
     >
       <NextSeo title="Geoffrey Perez" />
 
-      <Intro mb="17rem" py="9rem" />
+      <Intro mb="17rem" py="1rem" />
 
       <About />
 
