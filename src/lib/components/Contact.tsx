@@ -8,6 +8,7 @@ import {
   Text,
   useColorMode,
   Link,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 import { SkipNavContent } from "@chakra-ui/skip-nav";
@@ -39,7 +40,14 @@ export default function Contact() {
 
         <NextLink href="mailto:contact.geoffrey.perez@gmail.com" passHref>
           <Link _hover={{ textDecoration: "none" }}>
-            <Button leftIcon={<MailIcon />} size="md" mx="auto" rounded="md">
+            <Button
+              leftIcon={
+                <MailIcon fill={useColorModeValue("text.light", "text.dark")} />
+              }
+              size="md"
+              mx="auto"
+              rounded="md"
+            >
               Contact me{" "}
             </Button>
           </Link>
