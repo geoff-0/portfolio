@@ -32,7 +32,7 @@ export default function Projects() {
       description: "Feigne is a mockup e-commerce application.",
       image: "/feigne-snapshot.png",
       repoLink: "https://github.com/geoday03/feigne",
-      demoLink: "https://feigne.vercel.app",
+      demoLink: "https://feigne.app",
       techStack: [
         ReactToolTip,
         TSToolTip,
