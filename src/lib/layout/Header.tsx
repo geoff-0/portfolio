@@ -49,7 +49,7 @@ const Header = () => {
       px={scrollPos == 0 ? padding : "30px"}
       py={scrollPos == 0 ? "60px" : "10px"}
       position="sticky"
-      transition="top .3s, padding .3s, background-color .5s"
+      transition="top .3s, padding .3s, background-color .5s ease-out"
       zIndex={100}
       boxShadow={scrollPos == 0 ? "none" : "sm"}
       bgColor={useColorModeValue("background.light", "background.dark")}
