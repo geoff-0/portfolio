@@ -16,6 +16,7 @@ import ReduxTooltip from "./tech-stack/tech-icons/tooltips/ReduxTooltip";
 import TSToolTip from "./tech-stack/tech-icons/tooltips/TSTooltip";
 import ProjectCard from "./projects/ProjectCard";
 import { SkipNavContent } from "@chakra-ui/skip-nav";
+import { useState } from "react";
 
 export default function Projects() {
   const projects = {
@@ -44,6 +45,8 @@ export default function Projects() {
   };
 
   type projKey = keyof typeof projects;
+
+  const [borderColor, setBorderColor] = useState("unset");
 
   return (
     <Flex textAlign="left" flexDir="column" w="full" id="projects">

@@ -48,7 +48,7 @@ const Header = () => {
       as="header"
       direction="column"
       w="full"
-      top={scrollDir == "up" ? "0" : "-300"}
+      top={scrollDir == "up" ? "0" : "-95px"}
       position="sticky"
       transition=".5s ease-out"
       zIndex={100}
@@ -59,7 +59,7 @@ const Header = () => {
         pt={scrollPos == 0 ? "60px" : "10px"}
         transition=".5s ease-out"
         bgColor={colorMode == "light" ? "background.light" : "background.dark"}
-        boxShadow={scrollPos > 5 ? "none" : colorMode == "light" ? "sm" : "lg"}
+        boxShadow={scrollPos < 5 ? "none" : colorMode == "light" ? "sm" : "lg"}
       >
         <NextLink href="https://geoday.dev" passHref>
           <Link _hover={{ textDecoration: "none", color: "brand.primary" }}>
@@ -98,15 +98,15 @@ const Header = () => {
 
       <SocialsList
         ml="auto"
-        py={3}
-        px={scrollPos > 5 ? 4 : 6}
+        px={scrollPos == 0 ? 6 : 3}
+        py={scrollPos == 0 ? 6 : 3}
         borderWidth="1px"
         rounded="lg"
         borderRightRadius="0"
         borderTopWidth="0"
         borderTopRadius="0"
-        transition=".5s ease-out"
         _hover={{ borderColor: "brand.primary" }}
+        display={{ base: "none", md: "flex" }}
       />
     </Flex>
   );
