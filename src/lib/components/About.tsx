@@ -15,17 +15,33 @@ import LinkedIn from "./MyLinkedin";
 import MyGitHub from "./MyGitHub";
 import MyGithub from "./MyGitHub";
 import MyLinkedIn from "./MyLinkedin";
+import { useState } from "react";
 
-export default function About() {
+export default function About(props: any) {
   const { colorMode } = useColorMode();
 
+  const [isHovered, toggleHovered] = useState(false);
+
   return (
-    <Flex textAlign="left" flexDir="column" w="full" id="about">
+    <Flex
+      textAlign="left"
+      flexDir="column"
+      w="full"
+      id="about"
+      onMouseEnter={() => toggleHovered(true)}
+      onMouseLeave={() => toggleHovered(false)}
+      {...props}
+    >
       <HStack gap="3rem">
         <Heading as="h2" py="30px" whiteSpace="nowrap">
           About Me
         </Heading>
-        <Divider p="5px" />
+        <Divider
+          m="5px"
+          opacity={isHovered ? "1" : "unset"}
+          bgColor={isHovered ? "brand.primary" : "unset"}
+          transition="0.5s ease-out"
+        />
       </HStack>
 
       <Flex gap="1.5rem" direction="column">

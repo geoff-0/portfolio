@@ -1,4 +1,11 @@
-import { Box, Flex, Grid, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Grid,
+  Heading,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 
 import SomeImage from "lib/components/samples/SomeImage";
@@ -15,7 +22,6 @@ const Home = () => {
       alignItems="center"
       justifyContent="center"
       minHeight="70vh"
-      gap={"10rem"}
       mb={8}
       w={{ base: "85%", lg: "75%", xl: "67%" }}
       mx="auto"
@@ -23,13 +29,13 @@ const Home = () => {
     >
       <NextSeo title="Geoffrey Perez | Full-stack Engineer" />
 
-      <Intro mb="17rem" py="1rem" />
+      <Intro mb="27rem" py="1rem" />
 
-      <About />
+      <About pb="10rem" />
 
-      <TechStack />
+      <TechStack pb="10rem" />
 
-      <Projects />
+      <Projects pb="10rem" />
 
       <Contact />
     </Flex>

@@ -18,7 +18,7 @@ import NavLink from "lib/components/navigation/NavLink";
 import { nanoid } from "nanoid";
 import StackIcon from "lib/icons/StackIcon";
 import MailIcon from "lib/icons/MailIcon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useScrollDirection } from "lib/hooks/useScrollDirection";
 import useScrollPosition from "lib/hooks/useScrollPosition";
 import AboutIcon from "lib/icons/AboutIcon";
@@ -36,6 +36,8 @@ const Header = () => {
 
   const [active, setActive] = useState("Home");
 
+  const [isVisible, setVisible] = useState(true);
+
   const { colorMode } = useColorMode();
 
   const scrollDir = useScrollDirection();
@@ -43,12 +45,16 @@ const Header = () => {
 
   const padding = useBreakpointValue({ base: "30px", md: "60px" });
 
+  useEffect(() => {
+    scrollDir == "up" ? setVisible(true) : setVisible(false);
+  }, [scrollDir]);
+
   return (
     <Flex
       as="header"
       direction="column"
       w="full"
-      top={scrollDir == "up" ? "0" : "-95px"}
+      top={isVisible == true ? "0" : "-95px"}
       position="sticky"
       transition=".5s ease-out"
       zIndex={100}
@@ -59,7 +65,7 @@ const Header = () => {
         pt={scrollPos == 0 ? "60px" : "10px"}
         transition=".5s ease-out"
         bgColor={colorMode == "light" ? "background.light" : "background.dark"}
-        boxShadow={scrollPos < 5 ? "none" : colorMode == "light" ? "sm" : "lg"}
+        boxShadow={scrollPos == 0 ? "none" : colorMode == "light" ? "sm" : "lg"}
       >
         <NextLink href="https://geoday.dev" passHref>
           <Link _hover={{ textDecoration: "none", color: "brand.primary" }}>
@@ -76,7 +82,11 @@ const Header = () => {
         <Flex ml="auto" gap="1rem">
           {Object.keys(navLinks).map((k, i) => {
             return (
-              <Box display={{ base: "none", md: "flex" }} key={nanoid()}>
+              <Box
+                display={{ base: "none", md: "flex" }}
+                key={nanoid()}
+                onClick={() => setVisible(false)}
+              >
                 <NavLink
                   label={k}
                   icon={navLinks[k as keyof typeof navLinks].icon}

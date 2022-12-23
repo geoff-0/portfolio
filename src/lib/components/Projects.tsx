@@ -18,7 +18,7 @@ import ProjectCard from "./projects/ProjectCard";
 import { SkipNavContent } from "@chakra-ui/skip-nav";
 import { useState } from "react";
 
-export default function Projects() {
+export default function Projects(props: any) {
   const projects = {
     portfolio: {
       title: "Tech Portfolio",
@@ -46,15 +46,30 @@ export default function Projects() {
 
   type projKey = keyof typeof projects;
 
-  const [borderColor, setBorderColor] = useState("unset");
+  const [isHovered, toggleHovered] = useState(false);
 
   return (
-    <Flex textAlign="left" flexDir="column" w="full" id="projects">
+    <Flex
+      textAlign="left"
+      flexDir="column"
+      w="full"
+      id="projects"
+      onMouseEnter={() => {
+        toggleHovered(true);
+      }}
+      onMouseLeave={() => toggleHovered(false)}
+      {...props}
+    >
       <HStack gap="3rem">
         <Heading as="h2" py="40px">
           Projects
         </Heading>
-        <Divider />
+        <Divider
+          m="5px"
+          opacity={isHovered ? "1" : "unset"}
+          bgColor={isHovered ? "brand.primary" : "unset"}
+          transition="0.5s ease-out"
+        />
       </HStack>
 
       <Flex direction="column" gap={{ base: "5rem", md: "3rem" }}>

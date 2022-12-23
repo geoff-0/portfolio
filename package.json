@@ -32,7 +32,8 @@
     "next-seo": "^5.14.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.6.0"
+    "react-icons": "^4.6.0",
+    "sass": "^1.57.1"
   },
   "devDependencies": {
     "@chakra-ui/cli": "^2.2.0",

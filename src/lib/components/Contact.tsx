@@ -16,17 +16,34 @@ import { SkipNavContent } from "@chakra-ui/skip-nav";
 import NextLink from "next/link";
 
 import MailIcon from "lib/icons/MailIcon";
+import { useState } from "react";
 
 export default function Contact() {
   const { colorMode } = useColorMode();
 
+  const [isHovered, toggleHovered] = useState(false);
+
   return (
-    <Flex textAlign="center" flexDir="column" w="full" id="contact">
+    <Flex
+      textAlign="center"
+      flexDir="column"
+      w="full"
+      id="contact"
+      onMouseEnter={() => {
+        toggleHovered(true);
+      }}
+      onMouseLeave={() => toggleHovered(false)}
+    >
       <HStack gap="3rem">
         <Heading as="h2" py="30px" whiteSpace="nowrap">
           Contact Me
         </Heading>
-        <Divider p="5px" />
+        <Divider
+          m="5px"
+          opacity={isHovered ? "1" : "unset"}
+          bgColor={isHovered ? "brand.primary" : "unset"}
+          transition="0.5s ease-out"
+        />
       </HStack>
 
       <Flex gap="1.5rem" direction="column">

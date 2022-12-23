@@ -4,7 +4,7 @@ import NextLink from "next/link";
 
 const Footer = () => {
   return (
-    <Flex as="footer" width="full" justifyContent="center">
+    <Flex as="footer" width="full" justifyContent="center" p="5rem">
       <NextLink href="https://geoday.dev" passHref target="_blank">
         <Link isExternal rel="noopener noreferrer">
           <Text fontSize="sm" color="gray.500">
