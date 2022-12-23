@@ -13,6 +13,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import NavLink from "lib/components/navigation/NavLink";
+import SocialsList from "lib/components/SocialsList";
 import AboutIcon from "lib/icons/AboutIcon";
 import DualGearsIcon from "lib/icons/DualGearsIcon";
 import HomeIcon from "lib/icons/HomeIcon";
@@ -72,6 +73,13 @@ export default function MobileNavigation(props: any) {
                   />
                 );
               })}
+
+              <SocialsList
+                direction="column"
+                align="center"
+                w="full"
+                gap="1rem"
+              />
 
               <ThemeToggle />
             </Flex>

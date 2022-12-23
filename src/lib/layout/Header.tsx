@@ -57,6 +57,7 @@ const Header = () => {
       top={isVisible == true ? "0" : "-95px"}
       position="sticky"
       transition=".5s ease-out"
+      pb="10px"
       zIndex={100}
     >
       <Flex

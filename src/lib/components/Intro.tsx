@@ -4,7 +4,7 @@ export default function Intro(props: any) {
   const { colorMode } = useColorMode();
 
   return (
-    <Box textAlign="left" w="full" {...props} whiteSpace="nowrap">
+    <Box textAlign="left" w="full" {...props}>
       <Text color="#1A9FFF" mb="1rem" fontSize={{ base: "lg", md: "xl" }}>
         Hey.
       </Text>
@@ -19,7 +19,7 @@ export default function Intro(props: any) {
       </Heading>
 
       <Text
-        fontSize={{ base: 15, md: "lg" }}
+        fontSize={{ base: "15px", md: "lg" }}
         color={colorMode == "light" ? "gray.600" : "gray.400"}
       >
         {"Specializing in front-end web development"}
