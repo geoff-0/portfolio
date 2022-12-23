@@ -27,7 +27,7 @@ const Home = () => {
       mx="auto"
       overflow="hidden"
     >
-      <NextSeo title="Geoffrey Perez | Full-stack Engineer" />
+      <NextSeo title="Geoffrey Perez | Front-end Developer" />
 
       <Intro mb="27rem" py="1rem" />
 
