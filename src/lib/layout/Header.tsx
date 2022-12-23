@@ -98,8 +98,8 @@ const Header = () => {
 
       <SocialsList
         ml="auto"
-        px={scrollPos == 0 ? 6 : 3}
-        py={scrollPos == 0 ? 6 : 3}
+        px={scrollPos == 0 ? 5 : 3}
+        py={scrollPos == 0 ? 5 : 3}
         borderWidth="1px"
         rounded="lg"
         borderRightRadius="0"
