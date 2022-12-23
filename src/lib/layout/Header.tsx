@@ -3,6 +3,7 @@ import {
   Flex,
   Text,
   useBreakpointValue,
+  useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
 
@@ -35,6 +36,8 @@ const Header = () => {
 
   const [active, setActive] = useState("Home");
 
+  const { colorMode } = useColorMode();
+
   const scrollDir = useScrollDirection();
   const scrollPos = useScrollPosition();
 
@@ -49,10 +52,10 @@ const Header = () => {
       px={scrollPos == 0 ? padding : "30px"}
       py={scrollPos == 0 ? "60px" : "10px"}
       position="sticky"
-      transition="top .3s, padding .3s, background-color .5s ease-out"
+      transition=".5s ease-out"
       zIndex={100}
-      boxShadow={scrollPos == 0 ? "none" : "sm"}
-      bgColor={useColorModeValue("background.light", "background.dark")}
+      boxShadow={scrollPos == 0 ? "none" : colorMode == "light" ? "sm" : "xl"}
+      bgColor={colorMode == "light" ? "background.light" : "background.dark"}
     >
       <NextLink href="https://geoday.dev" passHref>
         <Link

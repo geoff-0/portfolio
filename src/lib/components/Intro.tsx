@@ -11,18 +11,18 @@ export default function Intro(props: any) {
 
       <Heading as="h1" size={{ base: "2xl", md: "4xl" }} mb="2.5rem">
         {"I'm Geoffrey Perez,"}
-        <br />a Full-stack Developer.
+        <br />a Full-stack Engineer.
       </Heading>
 
       <Text
         fontSize={{ base: 15, md: "lg" }}
         color={colorMode == "light" ? "gray.600" : "gray.400"}
       >
-        {"Currently, I specialize in front-end web development."}
+        {"Specializing in front-end web development"}
         <br />
 
         {
-          "I place emphasis on user experience and create intuitive user interfaces."
+          "Placing emphasis on user experience and create intuitive user interfaces."
         }
       </Text>
     </Box>
