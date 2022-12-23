@@ -17,7 +17,7 @@ const Home = () => {
       minHeight="70vh"
       gap={"10rem"}
       mb={8}
-      w={{ base: "85%", lg: "67%" }}
+      w={{ base: "85%", lg: "75%", xl: "67%" }}
       mx="auto"
       overflow="hidden"
     >
