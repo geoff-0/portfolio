@@ -8,27 +8,24 @@ import {
 } from "@chakra-ui/react";
 import LinkedInIcon from "lib/icons/LinkedInIcon";
 import LinkedInIcon2 from "lib/icons/LinkedInIcon2";
+import ResumeIcon from "lib/icons/ResumeIcon";
 
 import NextLink from "next/link";
 
-export default function MyLinkedIn(props: any) {
+export default function MyResume(props: any) {
   const { colorMode } = useColorMode();
 
   const textColor = useColorModeValue("text.light", "text.dark");
 
   return (
     <Tooltip
-      label="My LinkedIn"
+      label="My Resume"
       rounded="full"
       bgColor={colorMode == "light" ? "background.dark" : "background.light"}
       color={colorMode == "light" ? "text.dark" : "text.light"}
       transition=".2s ease-out"
     >
-      <NextLink
-        href="https://www.linkedin.com/in/geoffrey-perez/"
-        passHref
-        target="_blank"
-      >
+      <NextLink href="/Resume_Geoffrey_Perez.pdf" passHref target="_blank">
         <Link
           fill={textColor}
           _hover={{ fill: "brand.primary" }}
@@ -40,7 +37,7 @@ export default function MyLinkedIn(props: any) {
             alt="My LinkedIn"
             boxSize="35px"
           /> */}
-          <Icon as={LinkedInIcon} boxSize="35px" />
+          <Icon as={ResumeIcon} boxSize="35px" />
         </Link>
       </NextLink>
     </Tooltip>

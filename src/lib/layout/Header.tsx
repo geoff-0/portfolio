@@ -4,7 +4,6 @@ import {
   Text,
   useBreakpointValue,
   useColorMode,
-  useColorModeValue,
 } from "@chakra-ui/react";
 
 import { SkipNavLink, SkipNavContent } from "@chakra-ui/skip-nav";
@@ -19,11 +18,12 @@ import NavLink from "lib/components/navigation/NavLink";
 import { nanoid } from "nanoid";
 import StackIcon from "lib/icons/StackIcon";
 import MailIcon from "lib/icons/MailIcon";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { useScrollDirection } from "lib/hooks/useScrollDirection";
 import useScrollPosition from "lib/hooks/useScrollPosition";
 import AboutIcon from "lib/icons/AboutIcon";
 import MobileNavigation from "./MobileNavigation";
+import SocialsList from "lib/components/SocialsList";
 
 const Header = () => {
   const navLinks = {
@@ -46,53 +46,68 @@ const Header = () => {
   return (
     <Flex
       as="header"
+      direction="column"
       w="full"
-      align="center"
       top={scrollDir == "up" ? "0" : "-300"}
-      px={scrollPos == 0 ? padding : "30px"}
-      py={scrollPos == 0 ? "60px" : "10px"}
       position="sticky"
       transition=".5s ease-out"
       zIndex={100}
-      boxShadow={scrollPos == 0 ? "none" : colorMode == "light" ? "sm" : "xl"}
-      bgColor={colorMode == "light" ? "background.light" : "background.dark"}
     >
-      <NextLink href="https://geoday.dev" passHref>
-        <Link
-          transition="color .5s"
-          _hover={{ textDecoration: "none", color: "brand.primary" }}
-        >
-          <Text
-            fontSize={{ base: "sm", md: "lg" }}
-            fontWeight="semibold"
-            letterSpacing="wide"
-          >
-            geoday.dev
-          </Text>
-        </Link>
-      </NextLink>
+      <Flex
+        align="center"
+        px={scrollPos == 0 ? padding : "30px"}
+        pt={scrollPos == 0 ? "60px" : "10px"}
+        transition=".5s ease-out"
+        bgColor={colorMode == "light" ? "background.light" : "background.dark"}
+        boxShadow={scrollPos > 5 ? "none" : colorMode == "light" ? "sm" : "lg"}
+      >
+        <NextLink href="https://geoday.dev" passHref>
+          <Link _hover={{ textDecoration: "none", color: "brand.primary" }}>
+            <Text
+              fontSize={{ base: "sm", md: "lg" }}
+              fontWeight="semibold"
+              letterSpacing="wide"
+            >
+              geoday.dev
+            </Text>
+          </Link>
+        </NextLink>
 
-      <Flex ml="auto" gap="1rem">
-        {Object.keys(navLinks).map((k, i) => {
-          return (
-            <Box display={{ base: "none", md: "flex" }} key={nanoid()}>
-              <NavLink
-                label={k}
-                icon={navLinks[k as keyof typeof navLinks].icon}
-                id={navLinks[k as keyof typeof navLinks].id}
-                active={active}
-                setActive={setActive}
-              />
-            </Box>
-          );
-        })}
+        <Flex ml="auto" gap="1rem">
+          {Object.keys(navLinks).map((k, i) => {
+            return (
+              <Box display={{ base: "none", md: "flex" }} key={nanoid()}>
+                <NavLink
+                  label={k}
+                  icon={navLinks[k as keyof typeof navLinks].icon}
+                  id={navLinks[k as keyof typeof navLinks].id}
+                  active={active}
+                  setActive={setActive}
+                />
+              </Box>
+            );
+          })}
 
-        <Box display={{ base: "none", md: "flex" }}>
-          <ThemeToggle />
-        </Box>
+          <Box display={{ base: "none", md: "flex" }}>
+            <ThemeToggle />
+          </Box>
+        </Flex>
+
+        <MobileNavigation display={{ base: "flex", md: "none" }} />
       </Flex>
 
-      <MobileNavigation display={{ base: "flex", md: "none" }} />
+      <SocialsList
+        ml="auto"
+        py={3}
+        px={scrollPos > 5 ? 4 : 6}
+        borderWidth="1px"
+        rounded="lg"
+        borderRightRadius="0"
+        borderTopWidth="0"
+        borderTopRadius="0"
+        transition=".5s ease-out"
+        _hover={{ borderColor: "brand.primary" }}
+      />
     </Flex>
   );
 };
