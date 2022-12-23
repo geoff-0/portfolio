@@ -4,12 +4,16 @@ export default function Intro(props: any) {
   const { colorMode } = useColorMode();
 
   return (
-    <Box textAlign="left" {...props}>
+    <Box textAlign="left" w="full" {...props} whiteSpace="nowrap">
       <Text color="#1A9FFF" mb="1rem" fontSize={{ base: "lg", md: "xl" }}>
         Hey.
       </Text>
 
-      <Heading as="h1" size={{ base: "2xl", md: "4xl" }} mb="2.5rem">
+      <Heading
+        as="h1"
+        size={{ base: "lg", md: "3xl", lg: "3xl", xl: "4xl" }}
+        mb="2.5rem"
+      >
         {"I'm Geoffrey Perez,"}
         <br />a Full-stack Engineer.
       </Heading>
