@@ -15,14 +15,14 @@ export default function Intro(props: any) {
         mb="2.5rem"
       >
         {"I'm Geoffrey Perez,"}
-        <br />a Full-stack Engineer.
+        <br />a Front-end Developer.
       </Heading>
 
       <Text
         fontSize={{ base: "15px", md: "lg" }}
         color={colorMode == "light" ? "gray.600" : "gray.400"}
       >
-        {"Specializing in front-end web development"}
+        {"Programmer pecializing in front-end web development"}
         <br />
 
         {
