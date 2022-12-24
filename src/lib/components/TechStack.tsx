@@ -15,30 +15,13 @@ import TechList from "./tech-stack/TechList";
 import ToolList from "./tech-stack/ToolList";
 
 export default function TechStack(props: any) {
-  const [isHovered, toggleHovered] = useState(false);
-
   return (
-    <Flex
-      id="tech-stack"
-      textAlign="left"
-      flexDir="column"
-      w="full"
-      onMouseEnter={() => {
-        toggleHovered(true);
-      }}
-      onMouseLeave={() => toggleHovered(false)}
-      {...props}
-    >
+    <Flex id="tech-stack" textAlign="left" flexDir="column" w="full" {...props}>
       <HStack gap="3rem">
         <Heading as="h2" py="40px" whiteSpace="nowrap">
           Tech Stack
         </Heading>
-        <Divider
-          m="5px"
-          opacity={isHovered ? "1" : "unset"}
-          bgColor={isHovered ? "brand.primary" : "unset"}
-          transition="0.5s ease-out"
-        />
+        <Divider transition="0.5s ease-out" />
       </HStack>
 
       <Flex direction="column" gap="3rem">

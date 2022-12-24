@@ -21,29 +21,13 @@ import { useState } from "react";
 export default function Contact() {
   const { colorMode } = useColorMode();
 
-  const [isHovered, toggleHovered] = useState(false);
-
   return (
-    <Flex
-      textAlign="center"
-      flexDir="column"
-      w="full"
-      id="contact"
-      onMouseEnter={() => {
-        toggleHovered(true);
-      }}
-      onMouseLeave={() => toggleHovered(false)}
-    >
+    <Flex textAlign="center" flexDir="column" w="full" id="contact">
       <HStack gap="3rem">
         <Heading as="h2" py="30px" whiteSpace="nowrap">
           Contact Me
         </Heading>
-        <Divider
-          m="5px"
-          opacity={isHovered ? "1" : "unset"}
-          bgColor={isHovered ? "brand.primary" : "unset"}
-          transition="0.5s ease-out"
-        />
+        <Divider m="5px" transition="0.5s ease-out" />
       </HStack>
 
       <Flex gap="1.5rem" direction="column">

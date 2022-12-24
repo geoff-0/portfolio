@@ -23,15 +23,7 @@ export default function About(props: any) {
   const [isHovered, toggleHovered] = useState(false);
 
   return (
-    <Flex
-      textAlign="left"
-      flexDir="column"
-      w="full"
-      id="about"
-      onMouseEnter={() => toggleHovered(true)}
-      onMouseLeave={() => toggleHovered(false)}
-      {...props}
-    >
+    <Flex textAlign="left" flexDir="column" w="full" id="about" {...props}>
       <HStack gap="3rem">
         <Heading as="h2" py="30px" whiteSpace="nowrap">
           About Me

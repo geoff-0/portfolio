@@ -46,30 +46,13 @@ export default function Projects(props: any) {
 
   type projKey = keyof typeof projects;
 
-  const [isHovered, toggleHovered] = useState(false);
-
   return (
-    <Flex
-      textAlign="left"
-      flexDir="column"
-      w="full"
-      id="projects"
-      onMouseEnter={() => {
-        toggleHovered(true);
-      }}
-      onMouseLeave={() => toggleHovered(false)}
-      {...props}
-    >
+    <Flex textAlign="left" flexDir="column" w="full" id="projects" {...props}>
       <HStack gap="3rem">
         <Heading as="h2" py="40px">
           Projects
         </Heading>
-        <Divider
-          m="5px"
-          opacity={isHovered ? "1" : "unset"}
-          bgColor={isHovered ? "brand.primary" : "unset"}
-          transition="0.5s ease-out"
-        />
+        <Divider m="5px" transition="0.5s ease-out" />
       </HStack>
 
       <Flex direction="column" gap={{ base: "5rem", md: "3rem" }}>

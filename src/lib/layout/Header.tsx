@@ -115,7 +115,6 @@ const Header = () => {
         rounded="lg"
         borderTopWidth="0"
         borderTopRadius="0"
-        _hover={{ borderColor: "brand.primary" }}
         display={{ base: "none", md: "flex" }}
       />
     </Flex>
