@@ -1,7 +1,4 @@
 import { Button, Flex, Text, Box, Icon, useColorMode } from "@chakra-ui/react";
-import { SkipNavLink } from "@chakra-ui/skip-nav";
-import { useEffect } from "react";
-
 import NextLink from "next/link";
 
 export default function NavLink(props: {
@@ -19,7 +16,7 @@ export default function NavLink(props: {
       variant="unstyled"
       as={NextLink}
       scrollBehavior="smooth"
-      href={`#${props.id}`}
+      href={props.id}
       h="max-content"
       p="15px"
       scroll={false}
@@ -44,7 +41,7 @@ export default function NavLink(props: {
         if (props.onClose) props.onClose();
       }}
     >
-      <Icon as={props.icon} boxSize="25px" mb="5px" />
+      <Icon as={props.icon} boxSize="25px" mb="15px" mx="auto" />
 
       <Text fontSize="15px">{props.label}</Text>
     </Button>

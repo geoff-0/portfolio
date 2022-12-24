@@ -35,11 +35,6 @@ export default function MyLinkedIn(props: any) {
           transition=".3s ease-out"
           {...props}
         >
-          {/* <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png"
-            alt="My LinkedIn"
-            boxSize="35px"
-          /> */}
           <Icon as={LinkedInIcon} boxSize="35px" />
         </Link>
       </NextLink>

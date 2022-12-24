@@ -27,11 +27,11 @@ import SocialsList from "lib/components/SocialsList";
 
 const Header = () => {
   const navLinks = {
-    Home: { id: "home", icon: HomeIcon },
-    About: { id: "about", icon: AboutIcon },
-    "Tech Stack": { id: "tech-stack", icon: StackIcon },
-    Projects: { id: "projects", icon: DualGearsIcon },
-    Contact: { id: "contact", icon: MailIcon },
+    Home: { id: "/#home", icon: HomeIcon },
+    About: { id: "/#about", icon: AboutIcon },
+    "Tech Stack": { id: "/#tech-stack", icon: StackIcon },
+    Projects: { id: "/#projects", icon: DualGearsIcon },
+    Contact: { id: "/#contact", icon: MailIcon },
   };
 
   const [active, setActive] = useState("Home");
@@ -99,7 +99,7 @@ const Header = () => {
             );
           })}
 
-          <Box display={{ base: "none", md: "flex" }}>
+          <Box display={{ base: "none", md: "unset" }}>
             <ThemeToggle />
           </Box>
         </Flex>
@@ -113,7 +113,6 @@ const Header = () => {
         py={scrollPos == 0 ? 5 : 3}
         borderWidth="1px"
         rounded="lg"
-        borderRightRadius="0"
         borderTopWidth="0"
         borderTopRadius="0"
         _hover={{ borderColor: "brand.primary" }}

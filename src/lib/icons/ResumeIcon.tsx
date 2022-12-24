@@ -2,7 +2,7 @@ import { createIcon } from "@chakra-ui/react";
 
 export default createIcon({
   displayName: "ResumeIcon",
-  viewBox: "0 -10 78 78",
+  viewBox: "-10 -10 78 78",
 
   path: (
     <g xmlns="http://www.w3.org/2000/svg">
