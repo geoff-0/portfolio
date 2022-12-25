@@ -1,123 +1,81 @@
 import {
   Box,
   Flex,
+  Slide,
   Text,
+  Link,
   useBreakpointValue,
+  useColorModeValue,
   useColorMode,
+  useDisclosure,
 } from "@chakra-ui/react";
 
-import { SkipNavLink, SkipNavContent } from "@chakra-ui/skip-nav";
+import { useScrollDirection } from "lib/hooks/useScrollDirection";
+
+import NavItems from "lib/components/navigation/NavItems";
 
 import NextLink from "next/link";
-import { Link } from "@chakra-ui/react";
-
-import ThemeToggle from "./ThemeToggle";
-import HomeIcon from "lib/icons/HomeIcon";
-import DualGearsIcon from "lib/icons/DualGearsIcon";
-import NavLink from "lib/components/navigation/NavLink";
-import { nanoid } from "nanoid";
-import StackIcon from "lib/icons/StackIcon";
-import MailIcon from "lib/icons/MailIcon";
-import { useEffect, useState } from "react";
-import { useScrollDirection } from "lib/hooks/useScrollDirection";
 import useScrollPosition from "lib/hooks/useScrollPosition";
-import AboutIcon from "lib/icons/AboutIcon";
-import MobileNavigation from "./MobileNavigation";
-import SocialsList from "lib/components/SocialsList";
+import { useEffect, useState } from "react";
 
 const Header = () => {
-  const navLinks = {
-    Home: { id: "/#home", icon: HomeIcon },
-    About: { id: "/#about", icon: AboutIcon },
-    "Tech Stack": { id: "/#tech-stack", icon: StackIcon },
-    Projects: { id: "/#projects", icon: DualGearsIcon },
-    Contact: { id: "/#contact", icon: MailIcon },
-  };
-
-  const [active, setActive] = useState("Home");
-
-  const [isVisible, setVisible] = useState(true);
+  const scrollPos = useScrollPosition();
+  const scrollDir = useScrollDirection();
 
   const { colorMode } = useColorMode();
 
-  const scrollDir = useScrollDirection();
-  const scrollPos = useScrollPosition();
+  const pxt = useBreakpointValue({ base: "40px", md: "70px" });
+  const pxb = useBreakpointValue({ base: "30px", md: "60px" });
+  const pyt = useBreakpointValue({ base: "25px", md: "35px" });
+  const pyb = useBreakpointValue({ base: "10px", md: "20px" });
 
-  const padding = useBreakpointValue({ base: "30px", md: "60px" });
+  const bgColor = useColorModeValue("background.light", "background.dark");
+  const textColor = useColorModeValue("text.light", "text.dark");
+
+  const [isOpen, setOpen] = useState(true);
+  const closeHeader = () => {
+    setOpen(false);
+  };
 
   useEffect(() => {
-    scrollDir == "up" ? setVisible(true) : setVisible(false);
+    scrollDir == "up" ? setOpen(true) : setOpen(false);
   }, [scrollDir]);
 
   return (
-    <Flex
-      as="header"
-      direction="column"
-      w="full"
-      top={isVisible == true ? "0" : "-95px"}
-      position="sticky"
-      transition=".5s ease-out"
-      pb="10px"
-      zIndex={100}
-    >
+    <Slide in={isOpen} direction="top">
       <Flex
+        as="header"
+        w="full"
+        top="0"
+        position="sticky"
+        zIndex={100}
         align="center"
-        px={scrollPos == 0 ? padding : "30px"}
-        pt={scrollPos == 0 ? "60px" : "10px"}
-        transition=".5s ease-out"
-        bgColor={colorMode == "light" ? "background.light" : "background.dark"}
+        px={scrollPos == 0 ? pxt : pxb}
+        pt={scrollPos == 0 ? pyt : pyb}
+        pb="20px"
+        bgColor={bgColor}
         boxShadow={scrollPos == 0 ? "none" : colorMode == "light" ? "sm" : "lg"}
+        transition=".5s ease-out, padding .4s ease-out"
       >
         <NextLink href="https://geoday.dev" passHref>
-          <Link _hover={{ textDecoration: "none", color: "brand.primary" }}>
+          <Link
+            _hover={{ textDecoration: "none", color: "brand.primary" }}
+            h="full"
+          >
             <Text
               fontSize={{ base: "sm", md: "lg" }}
               fontWeight="semibold"
               letterSpacing="wide"
+              color={textColor}
             >
               geoday.dev
             </Text>
           </Link>
         </NextLink>
 
-        <Flex ml="auto" gap="1rem">
-          {Object.keys(navLinks).map((k, i) => {
-            return (
-              <Box
-                display={{ base: "none", md: "flex" }}
-                key={nanoid()}
-                onClick={() => setVisible(false)}
-              >
-                <NavLink
-                  label={k}
-                  icon={navLinks[k as keyof typeof navLinks].icon}
-                  id={navLinks[k as keyof typeof navLinks].id}
-                  active={active}
-                  setActive={setActive}
-                />
-              </Box>
-            );
-          })}
-
-          <Box display={{ base: "none", md: "unset" }}>
-            <ThemeToggle />
-          </Box>
-        </Flex>
-
-        <MobileNavigation display={{ base: "flex", md: "none" }} />
+        <NavItems />
       </Flex>
-
-      <SocialsList
-        ml="auto"
-        px={scrollPos == 0 ? 5 : 3}
-        py={scrollPos == 0 ? 5 : 3}
-        borderWidth="1px"
-        rounded="lg"
-        borderTopWidth="0"
-        borderTopRadius="0"
-        display={{ base: "none", md: "flex" }}
-      />
-    </Flex>
+    </Slide>
   );
 };
 
