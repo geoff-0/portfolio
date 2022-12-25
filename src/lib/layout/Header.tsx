@@ -39,40 +39,39 @@ const Header = () => {
   }, [scrollDir]);
 
   return (
-    <Slide in={isOpen} direction="top">
-      <Flex
-        as="header"
-        w="full"
-        top="0"
-        position="sticky"
-        zIndex={100}
-        align="center"
-        px={scrollPos == 0 ? pxt : pxb}
-        pt={scrollPos == 0 ? pyt : pyb}
-        pb="20px"
-        bgColor={bgColor}
-        boxShadow={scrollPos == 0 ? "none" : colorMode == "light" ? "sm" : "lg"}
-        transition=".5s ease-out, padding .4s ease-out"
-      >
-        <NextLink href="https://geoday.dev" passHref>
-          <Link
-            _hover={{ textDecoration: "none", color: "brand.primary" }}
-            h="full"
-          >
-            <Text
-              fontSize={{ base: "sm", md: "lg" }}
-              fontWeight="semibold"
-              letterSpacing="wide"
-              color={textColor}
+    <Box w="full" top="0" position="sticky" zIndex={9999}>
+      <Slide in={isOpen} direction="top">
+        <Flex
+          align="center"
+          px={scrollPos == 0 ? pxt : pxb}
+          pt={scrollPos == 0 ? pyt : pyb}
+          pb="20px"
+          bgColor={bgColor}
+          boxShadow={
+            scrollPos == 0 ? "none" : colorMode == "light" ? "sm" : "lg"
+          }
+          transition=".5s ease-out, padding .4s ease-out"
+        >
+          <NextLink href="https://geoday.dev" passHref>
+            <Link
+              _hover={{ textDecoration: "none", color: "brand.primary" }}
+              h="full"
             >
-              geoday.dev
-            </Text>
-          </Link>
-        </NextLink>
+              <Text
+                fontSize={{ base: "sm", md: "lg" }}
+                fontWeight="semibold"
+                letterSpacing="wide"
+                color={textColor}
+              >
+                geoday.dev
+              </Text>
+            </Link>
+          </NextLink>
 
-        <NavItems />
-      </Flex>
-    </Slide>
+          <NavItems />
+        </Flex>
+      </Slide>
+    </Box>
   );
 };
 
