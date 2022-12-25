@@ -98,7 +98,7 @@ export default function NavItems() {
           color={textColor}
           hoverColor="brand.primary"
           onClick={() => onClose()}
-          styles={{ h: itemH, w: "full" }}
+          styles={{ h: itemH, w: "full", target: "_blank" }}
         />
         <HoverLink
           href={""}
