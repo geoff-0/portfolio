@@ -51,7 +51,7 @@ export default function NavItems() {
 
   const [active, setActive] = useState("Home");
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose, onToggle } = useDisclosure();
 
   const { colorMode, toggleColorMode } = useColorMode();
 
@@ -130,7 +130,7 @@ export default function NavItems() {
           ml="auto"
           onClick={(e) => {
             e.currentTarget.style.fill = "brand.primary";
-            onOpen();
+            onToggle();
           }}
         />
 
