@@ -32,7 +32,7 @@ import { Dispatch, SetStateAction, useState } from "react";
 
 import AboutIcon from "lib/icons/AboutIcon";
 
-import HoverLink from "../links/HoverLink";
+import HoverIconLink from "../links/HoverIconLink";
 
 import MoonIcon from "lib/icons/MoonIcon";
 
@@ -72,7 +72,7 @@ export default function NavItems() {
       >
         {Object.keys(navLinks).map((k, i) => {
           return (
-            <HoverLink
+            <HoverIconLink
               key={nanoid()}
               href={navLinks[k as keyof typeof navLinks].href}
               label={k}
@@ -90,7 +90,7 @@ export default function NavItems() {
             />
           );
         })}
-        <HoverLink
+        <HoverIconLink
           key={nanoid()}
           href="/Resume_Geoffrey_Perez.pdf"
           label={"Resume"}
@@ -100,7 +100,7 @@ export default function NavItems() {
           onClick={() => onClose()}
           styles={{ h: itemH, w: "full", target: "_blank" }}
         />
-        <HoverLink
+        <HoverIconLink
           href={""}
           label={"Theme"}
           icon={
@@ -153,7 +153,7 @@ export default function NavItems() {
                 >
                   {Object.keys(navLinks).map((k, i) => {
                     return (
-                      <HoverLink
+                      <HoverIconLink
                         key={nanoid()}
                         href={navLinks[k as keyof typeof navLinks].href}
                         label={k}
@@ -172,7 +172,7 @@ export default function NavItems() {
                     );
                   })}
 
-                  <HoverLink
+                  <HoverIconLink
                     key={nanoid()}
                     href="/Resume_Geoffrey_Perez.pdf"
                     label={"Resume"}
@@ -185,7 +185,7 @@ export default function NavItems() {
                     styles={{ h: itemH, w: "full", target: "_blank" }}
                   />
 
-                  <HoverLink
+                  <HoverIconLink
                     href={""}
                     label={"Theme"}
                     icon={

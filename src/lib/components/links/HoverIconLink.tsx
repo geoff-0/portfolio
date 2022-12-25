@@ -1,6 +1,15 @@
 import { EmailIcon } from "@chakra-ui/icons";
 
-import { Button, StyleConfig, StyleProps, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Icon,
+  ImageProps,
+  Text,
+  Box,
+  ComponentWithAs,
+  Stack,
+  Image,
+} from "@chakra-ui/react";
 
 import { MouseEventHandler } from "react";
 
@@ -9,10 +18,10 @@ import NextLink from "next/link";
 type HoverButtonProps = {
   label?: string;
   href: string;
-  icon: any;
+  icon?: any;
   color: string;
   hoverColor: string;
-  onClick: MouseEventHandler<HTMLButtonElement>;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   styles?: any;
 };
 
@@ -29,8 +38,8 @@ export default function HoverLink({
     <Button
       as={NextLink}
       href={href}
-      variant="ghost"
       leftIcon={icon}
+      variant="ghost"
       flexDir={{ base: "row", md: "column" }}
       whiteSpace="nowrap"
       scroll={false}

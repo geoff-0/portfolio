@@ -1,24 +1,10 @@
-import {
-  Box,
-  Center,
-  Divider,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  HStack,
-} from "@chakra-ui/react";
+import { Divider, Flex, Heading, HStack, useColorMode } from "@chakra-ui/react";
 import { nanoid } from "nanoid";
-import ChakraTooltip from "./tech-stack/tech-icons/tooltips/ChakraTooltip";
-import NextTooltip from "./tech-stack/tech-icons/tooltips/NextTooltip";
-import ReactToolTip from "./tech-stack/tech-icons/tooltips/ReactTooltip";
-import ReduxTooltip from "./tech-stack/tech-icons/tooltips/ReduxTooltip";
-import TSToolTip from "./tech-stack/tech-icons/tooltips/TSTooltip";
 import ProjectCard from "./projects/ProjectCard";
-import { SkipNavContent } from "@chakra-ui/skip-nav";
-import { useState } from "react";
 
 export default function Projects(props: any) {
+  const { colorMode } = useColorMode();
+
   const projects = {
     portfolio: {
       title: "Tech Portfolio",
@@ -26,7 +12,31 @@ export default function Projects(props: any) {
       image: "/portfolio-snapshot.png",
       repoLink: "https://github.com/geoday03/portfolio",
       demoLink: "https://geoday.dev",
-      techStack: [ReactToolTip, TSToolTip, NextTooltip, ChakraTooltip],
+      techStack: {
+        "React.js": {
+          href: "https://reactjs.org",
+          img: "https://reactjs.org/favicon.ico",
+        },
+
+        TypeScript: {
+          img: "https://www.typescriptlang.org/favicon.ico",
+          href: "https://www.typescriptlang.org",
+        },
+
+        "Next.js": {
+          img:
+            colorMode == "light"
+              ? "/nextjs-icon-light.svg"
+              : "/nextjs-icon-dark.svg",
+
+          href: "https://nextjs.org",
+        },
+
+        "Chakra UI": {
+          img: "/chakra-ui-logomark-colored.svg",
+          href: "https://chakra-ui.com",
+        },
+      },
     },
     feigne: {
       title: "Feigne",
@@ -34,13 +44,36 @@ export default function Projects(props: any) {
       image: "/feigne-snapshot.png",
       repoLink: "https://github.com/geoday03/feigne",
       demoLink: "https://feigne.app",
-      techStack: [
-        ReactToolTip,
-        TSToolTip,
-        NextTooltip,
-        ReduxTooltip,
-        ChakraTooltip,
-      ],
+      techStack: {
+        "React.js": {
+          href: "https://reactjs.org",
+          img: "https://reactjs.org/favicon.ico",
+        },
+
+        "Redux.js": {
+          img: "https://redux.js.org/img/redux.svg",
+          href: "https://redux.js.org",
+        },
+
+        TypeScript: {
+          img: "https://www.typescriptlang.org/favicon.ico",
+          href: "https://www.typescriptlang.org",
+        },
+
+        "Next.js": {
+          img:
+            colorMode == "light"
+              ? "/nextjs-icon-light.svg"
+              : "/nextjs-icon-dark.svg",
+
+          href: "https://nextjs.org",
+        },
+
+        "Chakra UI": {
+          img: "/chakra-ui-logomark-colored.svg",
+          href: "https://chakra-ui.com",
+        },
+      },
     },
   };
 
