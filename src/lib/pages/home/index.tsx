@@ -29,7 +29,9 @@ const Home = () => {
     >
       <NextSeo title="Geoffrey Perez | Front-end Developer" />
 
-      <Intro pt="6rem" pb="15rem" />
+      <Box pt="25vh" pb="60vh" textAlign="left" w="full">
+        <Intro />
+      </Box>
 
       <About pb="10rem" />
 
