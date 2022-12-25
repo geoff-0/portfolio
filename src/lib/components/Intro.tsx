@@ -6,23 +6,27 @@ export default function Intro(props: any) {
   return (
     <Box textAlign="left" w="full" {...props}>
       <Text color="#1A9FFF" mb="1rem" fontSize={{ base: "lg", md: "xl" }}>
-        Hey.
+        Hey. I am
       </Text>
 
       <Heading
         as="h1"
-        size={{ base: "lg", md: "3xl", lg: "3xl", xl: "4xl" }}
+        fontSize={{
+          base: "40px",
+          md: "60px",
+          lg: "65px",
+        }}
         mb="2.5rem"
       >
-        {"I'm Geoffrey Perez,"}
-        <br />a Front-end Developer.
+        <Text>{"Geoffrey Perez,"}</Text>
+        <Text>A Front-end Developer.</Text>
       </Heading>
 
       <Text
-        fontSize={{ base: "15px", md: "lg" }}
+        fontSize={{ base: "15px", md: "20px" }}
         color={colorMode == "light" ? "gray.600" : "gray.400"}
       >
-        {"Programmer specializing in front-end web development"}
+        {"Specializing in front-end web development."}
         <br />
 
         {
