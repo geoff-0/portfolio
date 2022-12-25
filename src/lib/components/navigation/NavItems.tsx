@@ -162,7 +162,7 @@ export default function NavItems() {
                           <Icon
                             as={navLinks[k as keyof typeof navLinks].icon}
                             boxSize="25px"
-                            align="center"
+                            mx="auto"
                           />
                         }
                         color={active == k ? "brand.primary" : textColor}
