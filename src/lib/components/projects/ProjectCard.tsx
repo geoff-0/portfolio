@@ -13,6 +13,7 @@ import {
   HStack,
   Icon,
   useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 import NextLink from "next/link";
@@ -20,6 +21,7 @@ import NextLink from "next/link";
 import { AiFillGithub } from "react-icons/ai";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { nanoid } from "nanoid";
+import HoverImageLink from "../links/HoverImageLink";
 
 export default function ProjectCard(props: {
   title: string;
@@ -30,6 +32,7 @@ export default function ProjectCard(props: {
   techStack: any;
 }) {
   const { colorMode } = useColorMode();
+  const textColor = useColorModeValue("text.light", "text.dark");
 
   return (
     <Card
@@ -71,9 +74,22 @@ export default function ProjectCard(props: {
               </Link>
             </NextLink>
 
-            <HStack mb="1rem" gap="5px">
-              {props.techStack.map((e: any) => (
-                <Box as={e} key={nanoid()} />
+            <HStack mb="1rem">
+              {Object.keys(props.techStack).map((k) => (
+                <HoverImageLink
+                  key={nanoid()}
+                  img={props.techStack[k as keyof typeof props.techStack].img}
+                  href={props.techStack[k as keyof typeof props.techStack].href}
+                  label={k}
+                  color={textColor}
+                  hoverColor={"brand.primary"}
+                  styles={{
+                    target: "_blank",
+                    h: "full",
+                    px: "0",
+                  }}
+                  tooltip={true}
+                />
               ))}
             </HStack>
 
