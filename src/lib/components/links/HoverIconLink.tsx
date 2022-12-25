@@ -9,6 +9,7 @@ import {
   ComponentWithAs,
   Stack,
   Image,
+  Heading,
 } from "@chakra-ui/react";
 
 import { MouseEventHandler } from "react";
@@ -38,7 +39,6 @@ export default function HoverLink({
     <Button
       as={NextLink}
       href={href}
-      leftIcon={icon}
       variant="ghost"
       flexDir={{ base: "row", md: "column" }}
       whiteSpace="nowrap"
@@ -49,12 +49,18 @@ export default function HoverLink({
       alignItems="center"
       _hover={{ color: hoverColor, fill: hoverColor }}
       onClick={onClick}
+      w="full"
+      h="full"
       _active={{
         bg: "none",
       }}
       {...styles}
     >
-      {label}
+      <Stack direction="column" gap="10px" align="center">
+        {icon}
+
+        <Heading size="sm">{label}</Heading>
+      </Stack>
     </Button>
   );
 }
