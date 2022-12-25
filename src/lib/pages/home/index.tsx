@@ -23,13 +23,13 @@ const Home = () => {
       justifyContent="center"
       minHeight="70vh"
       mb={8}
-      w={{ base: "85%", lg: "75%", xl: "67%" }}
+      w={{ base: "85%", lg: "75%", xl: "70%" }}
       mx="auto"
       overflow="hidden"
     >
       <NextSeo title="Geoffrey Perez | Front-end Developer" />
 
-      <Box pt="25vh" pb="60vh" textAlign="left" w="full">
+      <Box pt="30vh" pb="60vh" textAlign="left" w="full">
         <Intro />
       </Box>
 

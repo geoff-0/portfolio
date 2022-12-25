@@ -33,9 +33,6 @@ const Header = () => {
   const textColor = useColorModeValue("text.light", "text.dark");
 
   const [isOpen, setOpen] = useState(true);
-  const closeHeader = () => {
-    setOpen(false);
-  };
 
   useEffect(() => {
     scrollDir == "up" ? setOpen(true) : setOpen(false);
