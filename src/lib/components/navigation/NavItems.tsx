@@ -79,6 +79,7 @@ export default function NavItems() {
               icon={
                 <Icon
                   as={navLinks[k as keyof typeof navLinks].icon}
+                  m="0"
                   boxSize="25px"
                   align="center"
                 />
