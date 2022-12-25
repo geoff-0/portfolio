@@ -32,7 +32,7 @@ import { Dispatch, SetStateAction, useState } from "react";
 
 import AboutIcon from "lib/icons/AboutIcon";
 
-import HoverLink from "lib/components/links/HoverLink";
+import HoverLink from "../links/HoverLink";
 
 import MoonIcon from "lib/icons/MoonIcon";
 

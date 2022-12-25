@@ -13,10 +13,10 @@ type HoverButtonProps = {
   color: string;
   hoverColor: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
-  styles?: StyleProps;
+  styles?: any;
 };
 
-export default function HoverButton({
+export default function HoverLink({
   href,
   label,
   icon,
