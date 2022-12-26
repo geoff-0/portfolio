@@ -11,6 +11,8 @@ const Meta = () => {
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="theme-color" content="#1A9FFF" />
 
+      <meta property="og:image" content="/portfolio-snapshot.png" />
+
       <link rel="shortcut icon" href="/favicon.svg" />
 
       <link rel="manifest" href="/manifest.json" />
