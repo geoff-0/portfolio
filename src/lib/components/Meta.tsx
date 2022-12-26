@@ -16,6 +16,9 @@ const Meta = () => {
         content="/portfolio-snapshot.png?width=955&height=501"
       />
 
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="600" />
+
       <link rel="shortcut icon" href="/favicon.svg" />
 
       <link rel="manifest" href="/manifest.json" />
