@@ -1,15 +1,4 @@
-import {
-  Box,
-  Divider,
-  Flex,
-  Grid,
-  Heading,
-  HStack,
-  Image,
-  VStack,
-} from "@chakra-ui/react";
-import { useRouter } from "next/router";
-import { useState } from "react";
+import { Divider, Flex, Heading, HStack, VStack } from "@chakra-ui/react";
 
 import TechList from "lib/components/tech-stack/TechList";
 import ToolList from "lib/components/tech-stack/ToolList";
