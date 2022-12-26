@@ -58,7 +58,7 @@ export default function NavItems() {
   const textColor = useColorModeValue("text.light", "text.dark");
 
   const itemH = useBreakpointValue({
-    base: 70 / Object.keys(navLinks).length,
+    base: 70 / Object.keys(navLinks).length + 2,
     md: "full",
   });
 
@@ -68,7 +68,7 @@ export default function NavItems() {
         ml="auto"
         gap={{ base: "3rem", md: "1rem" }}
         direction={{ base: "column", md: "row" }}
-        display={{ base: "none", md: "flex" }}
+        display={{ base: "none", md: "none", lg: "flex" }}
       >
         {Object.keys(navLinks).map((k, i) => {
           return (
@@ -86,7 +86,10 @@ export default function NavItems() {
               }
               color={active == k ? "brand.primary" : textColor}
               hoverColor="brand.primary"
-              onClick={() => onClose()}
+              onClick={() => {
+                onClose();
+                setActive(k);
+              }}
               styles={{ h: itemH, w: "full" }}
             />
           );
@@ -98,7 +101,9 @@ export default function NavItems() {
           icon={<Icon as={ResumeIcon} boxSize="25px" align="center" />}
           color={textColor}
           hoverColor="brand.primary"
-          onClick={() => onClose()}
+          onClick={() => {
+            onClose();
+          }}
           styles={{ h: itemH, w: "full", target: "_blank" }}
         />
         <HoverIconLink
@@ -123,7 +128,7 @@ export default function NavItems() {
         />
       </Flex>
 
-      <Box display={{ base: "flex", md: "none" }} w="full">
+      <Box display={{ base: "flex", md: "flex", lg: "none" }} w="full">
         <IconButton
           as={HamburgerIcon}
           aria-label="Menu"
@@ -149,8 +154,8 @@ export default function NavItems() {
               <Box pt="10vh">
                 <Flex
                   ml="auto"
-                  gap={{ base: "3rem", md: "1rem" }}
-                  direction={{ base: "column", md: "row" }}
+                  gap={{ base: "2rem", md: "3rem" }}
+                  direction={{ base: "column", md: "column", lg: "row" }}
                 >
                   {Object.keys(navLinks).map((k, i) => {
                     return (
@@ -162,13 +167,19 @@ export default function NavItems() {
                           <Icon
                             as={navLinks[k as keyof typeof navLinks].icon}
                             boxSize="25px"
-                            mx="auto"
+                            align="center"
                           />
                         }
                         color={active == k ? "brand.primary" : textColor}
                         hoverColor="brand.primary"
-                        onClick={() => onClose()}
-                        styles={{ h: itemH, w: "full" }}
+                        onClick={() => {
+                          onClose();
+                          setActive(k);
+                        }}
+                        styles={{
+                          h: itemH,
+                          w: "full",
+                        }}
                       />
                     );
                   })}

@@ -39,7 +39,7 @@ const Header = () => {
   }, [scrollDir]);
 
   return (
-    <Box w="full" top="0" position="sticky" zIndex={9999}>
+    <Box w="full" top="0" position="sticky" zIndex={999} bgColor={bgColor}>
       <Slide in={isOpen} direction="top">
         <Flex
           align="center"

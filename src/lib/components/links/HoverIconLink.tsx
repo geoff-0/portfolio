@@ -56,11 +56,9 @@ export default function HoverLink({
       }}
       {...styles}
     >
-      <Stack direction="column" gap="10px" align="center">
-        {icon}
+      {icon}
 
-        <Heading size="sm">{label}</Heading>
-      </Stack>
+      <Heading size={{ md: "xs", lg: "sm" }}>{label}</Heading>
     </Button>
   );
 }
