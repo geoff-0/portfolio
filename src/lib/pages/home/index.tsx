@@ -27,6 +27,20 @@ const Home = () => {
       mx="auto"
       overflow="hidden"
     >
+      <NextSeo
+        openGraph={{
+          url: "https://geoday.dev",
+          type: "object",
+          images: [
+            { url: "/portfolio-snapshot.png", width: 1200, height: 600 },
+          ],
+          title: "Geoffrey Perez",
+
+          description:
+            "Self-taught programmer specializing in front-end development",
+        }}
+      />
+
       <Box pt="30vh" pb="60vh" textAlign="left" w="full">
         <Intro />
       </Box>
