@@ -1,8 +1,5 @@
 /** @type {import('next-seo').DefaultSeoProps} */
 const defaultSEOConfig = {
-  title: "Geoffrey Perez | Front-end Developer",
-  titleTemplate: "%s",
-  defaultTitle: "Tech Portfolio",
   description: "Programmer specializing in front-end development",
   canonical: "https://geoday.dev",
   openGraph: {
