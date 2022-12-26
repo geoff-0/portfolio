@@ -24,12 +24,6 @@ const defaultSEOConfig = {
     title: "Geoffrey Perez",
 
     description: "Self-taught programmer specializing in front-end development",
-
-    twitter: {
-      handle: "Geoffrey Perez",
-      site: "https://geoday.dev",
-      cardType: "summary_large_image",
-    },
   },
 };
 
