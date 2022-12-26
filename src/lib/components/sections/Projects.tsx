@@ -1,6 +1,6 @@
 import { Divider, Flex, Heading, HStack, useColorMode } from "@chakra-ui/react";
 import { nanoid } from "nanoid";
-import ProjectCard from "./projects/ProjectCard";
+import ProjectCard from "lib/components/projects/ProjectCard";
 
 export default function Projects(props: any) {
   const { colorMode } = useColorMode();

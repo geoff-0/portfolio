@@ -11,8 +11,8 @@ import {
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-import TechList from "./tech-stack/TechList";
-import ToolList from "./tech-stack/ToolList";
+import TechList from "lib/components/tech-stack/TechList";
+import ToolList from "lib/components/tech-stack/ToolList";
 
 export default function TechStack(props: any) {
   return (

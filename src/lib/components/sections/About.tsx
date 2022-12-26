@@ -11,10 +11,10 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { SkipNavContent } from "@chakra-ui/skip-nav";
-import LinkedIn from "./MyLinkedin";
-import MyGitHub from "./MyGitHub";
-import MyGithub from "./MyGitHub";
-import MyLinkedIn from "./MyLinkedin";
+import LinkedIn from "../MyLinkedin";
+import MyGitHub from "../MyGitHub";
+import MyGithub from "../MyGitHub";
+import MyLinkedIn from "../MyLinkedin";
 import { useState } from "react";
 
 export default function About(props: any) {
