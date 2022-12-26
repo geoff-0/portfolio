@@ -17,8 +17,8 @@ const defaultSEOConfig = {
       {
         url: "/portfolio-snapshot.png",
         type: "image/png",
-        width: 1200,
-        height: 600,
+        width: 600,
+        height: 300,
       },
     ],
     title: "Geoffrey Perez",
