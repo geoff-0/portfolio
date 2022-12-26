@@ -30,7 +30,7 @@ export default function Intro(props: any) {
         <br />
 
         {
-          "Placing emphasis on user experience and create intuitive user interfaces."
+          "Placing emphasis on user experience and creating intuitive user interfaces."
         }
       </Text>
     </Box>
