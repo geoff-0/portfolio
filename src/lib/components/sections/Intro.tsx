@@ -26,12 +26,10 @@ export default function Intro(props: any) {
         fontSize={{ base: "15px", md: "20px" }}
         color={colorMode == "light" ? "gray.600" : "gray.400"}
       >
-        {"Programmer specializing in front-end web development."}
+        {"A programmer specializing in front-end web development."}
         <br />
 
-        {
-          "Placing emphasis on user experience and creating intuitive user interfaces."
-        }
+        {"Emphasizing user experience and intuitive user interfaces."}
       </Text>
     </Box>
   );
