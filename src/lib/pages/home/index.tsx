@@ -39,6 +39,8 @@ const Home = () => {
           images: [
             {
               url: "/portfolio-snapshot.png",
+              width: 950,
+              height: 500,
               alt: "Portfolio Snapshot",
               type: "image/jpeg",
             },
