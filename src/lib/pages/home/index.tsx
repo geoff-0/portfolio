@@ -9,11 +9,11 @@ import {
 import { NextSeo } from "next-seo";
 
 import SomeImage from "lib/components/samples/SomeImage";
-import Intro from "lib/components/Intro";
-import Projects from "lib/components/Projects";
-import TechStack from "lib/components/TechStack";
-import About from "lib/components/About";
-import Contact from "lib/components/Contact";
+import Intro from "lib/components/sections/Intro";
+import Projects from "lib/components/sections/Projects";
+import TechStack from "lib/components/sections/TechStack";
+import About from "lib/components/sections/About";
+import Contact from "lib/components/sections/Contact";
 
 const Home = () => {
   return (
