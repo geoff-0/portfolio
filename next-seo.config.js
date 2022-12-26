@@ -3,8 +3,10 @@ const defaultSEOConfig = {
   title: "Geoffrey Perez",
   titleTemplate: "%s",
   defaultTitle: "Geoffrey Perez",
-  description: "Self-taught programmer specializing in front-end development",
+  description: `A programmer specializing in front-end web development. 
+      Emphasizing user experience and intuitive user interfaces.`,
   canonical: "https://geoday.dev",
+
   twitter: {
     handle: "Geoffrey Perez",
     site: "https://geoday.dev",
@@ -12,7 +14,7 @@ const defaultSEOConfig = {
   },
   openGraph: {
     url: "https://geoday.dev",
-
+    siteName: "Tech Portfolio",
     images: [
       {
         url: "/portfolio-snapshot.png",
@@ -23,7 +25,8 @@ const defaultSEOConfig = {
     ],
     title: "Geoffrey Perez",
 
-    description: "Self-taught programmer specializing in front-end development",
+    description: `A programmer specializing in front-end web development. 
+      Emphasizing user experience and intuitive user interfaces.`,
   },
 };
 
