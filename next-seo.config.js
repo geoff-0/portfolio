@@ -7,7 +7,8 @@ const defaultSEOConfig = {
   canonical: "https://geoday.dev",
   openGraph: {
     url: "https://geoday.dev",
-    images: [{ url: "/portfolio-snapshot", width: 1200, height: 630 }],
+    type: "object",
+    images: [{ url: "/portfolio-snapshot.png", width: 1200, height: 600 }],
     title: "Geoffrey Perez",
 
     description: "Self-taught programmer specializing in front-end development",
