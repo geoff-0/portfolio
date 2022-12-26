@@ -15,7 +15,7 @@ const defaultSEOConfig = {
 
     images: [
       {
-        url: "/portfolio-snapshot",
+        url: "/portfolio-snapshot.png",
         type: "image/png",
         width: 1200,
         height: 600,
@@ -26,8 +26,8 @@ const defaultSEOConfig = {
     description: "Self-taught programmer specializing in front-end development",
 
     twitter: {
-      handle: "@Geoffrey Perez",
-      site: "@https://geoday.dev",
+      handle: "Geoffrey Perez",
+      site: "https://geoday.dev",
       cardType: "summary_large_image",
     },
   },
