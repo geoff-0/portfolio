@@ -27,14 +27,6 @@ const Home = () => {
       mx="auto"
       overflow="hidden"
     >
-      <NextSeo
-        title="Geoffrey Perez | Front-end Developer"
-        description={`A programmer specializing in front-end web development. 
-          Emphasizing user experience and intuitive user interfaces.`}
-      />
-
-      <LogoJsonLd logo="/portfolio-snapshot.png" url="https://geoday.dev" />
-
       <Box pt="30vh" pb="60vh" textAlign="left" w="full">
         <Intro />
       </Box>
