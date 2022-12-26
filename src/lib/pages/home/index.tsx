@@ -6,7 +6,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { NextSeo } from "next-seo";
+import { LogoJsonLd, NextSeo } from "next-seo";
 
 import SomeImage from "lib/components/samples/SomeImage";
 import Intro from "lib/components/sections/Intro";
@@ -31,22 +31,9 @@ const Home = () => {
         title="Geoffrey Perez | Front-end Developer"
         description={`A programmer specializing in front-end web development. 
           Emphasizing user experience and intuitive user interfaces.`}
-        openGraph={{
-          url: `https://geoday.dev`,
-          title: "Geoffrey Perez | Front-end Developer",
-          description: `A programmer specializing in front-end web development. 
-          Emphasizing user experience and intuitive user interfaces.`,
-          images: [
-            {
-              url: "/portfolio-snapshot.png",
-              width: 950,
-              height: 500,
-              alt: "Portfolio Snapshot",
-              type: "image/jpeg",
-            },
-          ],
-        }}
       />
+
+      <LogoJsonLd logo="/portfolio-snapshot.png" url="https://geoday.dev" />
 
       <Box pt="30vh" pb="60vh" textAlign="left" w="full">
         <Intro />
