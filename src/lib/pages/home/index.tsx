@@ -27,7 +27,24 @@ const Home = () => {
       mx="auto"
       overflow="hidden"
     >
-      <NextSeo title="Geoffrey Perez | Front-end Developer" />
+      <NextSeo
+        title="Geoffrey Perez | Front-end Developer"
+        description={`A programmer specializing in front-end web development. 
+          Emphasizing user experience and intuitive user interfaces.`}
+        openGraph={{
+          url: `https://geoday.dev`,
+          title: "Geoffrey Perez | Front-end Developer",
+          description: `A programmer specializing in front-end web development. 
+          Emphasizing user experience and intuitive user interfaces.`,
+          images: [
+            {
+              url: "/portfolio-snapshot.png",
+              alt: "Portfolio Snapshot",
+              type: "image/jpeg",
+            },
+          ],
+        }}
+      />
 
       <Box pt="30vh" pb="60vh" textAlign="left" w="full">
         <Intro />
