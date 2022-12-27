@@ -6,8 +6,6 @@ import Head from "next/head";
 import defaultSEOConfig from "../../next-seo.config";
 import { Chakra } from "lib/components/Chakra";
 import Layout from "lib/layout";
-import { ScaleFade } from "@chakra-ui/react";
-import { nanoid } from "nanoid";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (

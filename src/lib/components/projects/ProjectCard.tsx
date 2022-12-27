@@ -86,6 +86,7 @@ export default function ProjectCard(props: {
                     target: "_blank",
                     h: "full",
                     px: "0",
+                    _hover: { opacity: 0.8 },
                   }}
                   tooltip={true}
                 />
