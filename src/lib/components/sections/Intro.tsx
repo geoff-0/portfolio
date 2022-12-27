@@ -1,4 +1,5 @@
 import { Box, Heading, SlideFade, Text, useColorMode } from "@chakra-ui/react";
+import React from "react";
 import MotionBox from "../motion/Box";
 
 export default function Intro(props: any) {
@@ -9,7 +10,10 @@ export default function Intro(props: any) {
       <MotionBox
         initial={{ y: "-60vh", opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ ease: "easeOut", duration: 0.5 }}
+        transition={{
+          ease: "easeOut",
+          duration: 0.5,
+        }}
       >
         <Text color="brand.primary" fontSize={{ base: "lg", md: "xl" }}>
           {"Hey. I'm"}
@@ -19,7 +23,14 @@ export default function Intro(props: any) {
       <MotionBox
         initial={{ x: "80vw", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ ease: "easeOut", duration: 0.5 }}
+        transition={
+          {
+            ease: "easeOut",
+            duration: 0.5,
+            type: "spring",
+            stiffness: 50,
+          } as React.CSSProperties
+        }
       >
         <Heading
           as="h1"

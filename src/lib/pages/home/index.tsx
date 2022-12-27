@@ -23,21 +23,23 @@ const Home = () => {
       justifyContent="center"
       minHeight="70vh"
       mb={8}
-      w={{ base: "85%", lg: "75%", xl: "70%" }}
+      w="full"
       mx="auto"
       overflow="hidden"
     >
-      <Box pt="30vh" pb="60vh" textAlign="left" w="full">
-        <Intro />
+      <Box w={{ base: "85%", lg: "75%", xl: "70%" }}>
+        <Box pt="30vh" pb="60vh" textAlign="left">
+          <Intro />
+        </Box>
+
+        <About pb="10rem" />
+
+        <TechStack pb="10rem" />
+
+        <Projects pb="10rem" />
+
+        <Contact />
       </Box>
-
-      <About pb="10rem" />
-
-      <TechStack pb="10rem" />
-
-      <Projects pb="10rem" />
-
-      <Contact />
     </Flex>
   );
 };
