@@ -5,7 +5,7 @@ export default function Intro(props: any) {
   const { colorMode } = useColorMode();
 
   return (
-    <Box textAlign="left" w="full" transition="5s ease-out" {...props}>
+    <Box textAlign="left" w="full" {...props}>
       <MotionBox
         initial={{ y: "-60vh", opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
