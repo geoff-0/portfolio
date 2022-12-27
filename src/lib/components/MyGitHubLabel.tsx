@@ -17,27 +17,28 @@ export default function MyGitHubLabel(props: any) {
 
   return (
     <Box p="15px" {...props} fill="rgba(0,0,0,0)">
-      <NextLink href="https://github.com/geoday03" passHref target="_blank">
-        <Link
-          variant="unstyled"
-          h="max-content"
-          transition="color .5s"
-          _hover={{ color: "brand.primary", stroke: "brand.primary" }}
-        >
-          <VStack direction="column" gap="10px">
-            <Icon
-              as={GitHubIcon}
-              boxSize="35px"
-              stroke={textColor}
-              _hover={{ color: "brand.primary", stroke: "brand.primary" }}
-            />
+      <Link
+        as={NextLink}
+        href="https://github.com/geoday03"
+        target="_blank"
+        variant="unstyled"
+        h="max-content"
+        transition="color .5s"
+        _hover={{ color: "brand.primary", stroke: "brand.primary" }}
+      >
+        <VStack direction="column" gap="10px">
+          <Icon
+            as={GitHubIcon}
+            boxSize="35px"
+            stroke={textColor}
+            _hover={{ color: "brand.primary", stroke: "brand.primary" }}
+          />
 
-            <Heading size="md" fontWeight="semibold">
-              My GitHub
-            </Heading>
-          </VStack>
-        </Link>
-      </NextLink>
+          <Heading size="md" fontWeight="semibold">
+            My GitHub
+          </Heading>
+        </VStack>
+      </Link>
     </Box>
   );
 }

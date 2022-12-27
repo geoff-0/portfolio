@@ -25,30 +25,26 @@ export default function MyLinkedInLabel(props: any) {
 
   return (
     <Box p="15px" {...props}>
-      <NextLink
+      <Link
         href="https://www.linkedin.com/in/geoffrey-perez/"
-        passHref
         target="_blank"
+        variant="unstyled"
+        h="max-content"
+        _hover={{ color: "brand.primary" }}
+        transition="color .5s"
       >
-        <Link
-          variant="unstyled"
-          h="max-content"
-          _hover={{ color: "brand.primary" }}
-          transition="color .5s"
-        >
-          <VStack direction="column" gap="10px">
-            <Icon
-              as={LinkedInIcon}
-              boxSize="35px"
-              fill={textColor}
-              _hover={{ color: "brand.primary", fill: "brand.primary" }}
-            />
-            <Heading size="md" fontWeight="semibold">
-              My LinkedIn
-            </Heading>
-          </VStack>
-        </Link>
-      </NextLink>
+        <VStack direction="column" gap="10px">
+          <Icon
+            as={LinkedInIcon}
+            boxSize="35px"
+            fill={textColor}
+            _hover={{ color: "brand.primary", fill: "brand.primary" }}
+          />
+          <Heading size="md" fontWeight="semibold">
+            My LinkedIn
+          </Heading>
+        </VStack>
+      </Link>
     </Box>
   );
 }

@@ -23,22 +23,23 @@ export default function MyGitHub(props: any) {
       color={colorMode == "light" ? "text.dark" : "text.light"}
       transition=".2s ease-out"
     >
-      <NextLink href="https://github.com/geoday03" passHref target="_blank">
-        <Link
-          transition=".2s ease-out"
-          stroke={textColor}
-          fill="rgba(0,0,0,0)"
-          _hover={{ stroke: "brand.primary" }}
-          {...props}
-        >
-          {/* <Image
+      <Link
+        as={NextLink}
+        href="https://github.com/geoday03"
+        target="_blank"
+        transition=".2s ease-out"
+        stroke={textColor}
+        fill="rgba(0,0,0,0)"
+        _hover={{ stroke: "brand.primary" }}
+        {...props}
+      >
+        {/* <Image
             src="https://github.com/fluidicon.png"
             alt="My GitHub"
             boxSize="35px"
           /> */}
-          <Icon as={GitHubIcon} boxSize="35px" />
-        </Link>
-      </NextLink>
+        <Icon as={GitHubIcon} boxSize="35px" />
+      </Link>
     </Tooltip>
   );
 }

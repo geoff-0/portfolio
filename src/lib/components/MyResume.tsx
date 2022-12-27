@@ -25,21 +25,21 @@ export default function MyResume(props: any) {
       color={colorMode == "light" ? "text.dark" : "text.light"}
       transition=".2s ease-out"
     >
-      <NextLink href="/Resume_Geoffrey_Perez.pdf" passHref target="_blank">
-        <Link
-          fill={textColor}
-          _hover={{ fill: "brand.primary" }}
-          transition=".3s ease-out"
-          {...props}
-        >
-          {/* <Image
+      <Link
+        href="/Resume_Geoffrey_Perez.pdf"
+        target="_blank"
+        fill={textColor}
+        _hover={{ fill: "brand.primary" }}
+        transition=".3s ease-out"
+        {...props}
+      >
+        {/* <Image
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png"
             alt="My LinkedIn"
             boxSize="35px"
           /> */}
-          <Icon as={ResumeIcon} boxSize="35px" />
-        </Link>
-      </NextLink>
+        <Icon as={ResumeIcon} boxSize="35px" />
+      </Link>
     </Tooltip>
   );
 }

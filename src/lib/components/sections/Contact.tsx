@@ -39,20 +39,22 @@ export default function Contact() {
           }
         </Text>
 
-        <NextLink href="mailto:contact.geoffrey.perez@gmail.com" passHref>
-          <Link _hover={{ textDecoration: "none" }}>
-            <Button
-              leftIcon={
-                <MailIcon fill={useColorModeValue("text.light", "text.dark")} />
-              }
-              size="md"
-              mx="auto"
-              rounded="md"
-            >
-              Contact me{" "}
-            </Button>
-          </Link>
-        </NextLink>
+        <Link
+          as={NextLink}
+          href="mailto:contact.geoffrey.perez@gmail.com"
+          _hover={{ textDecoration: "none" }}
+        >
+          <Button
+            leftIcon={
+              <MailIcon fill={useColorModeValue("text.light", "text.dark")} />
+            }
+            size="md"
+            mx="auto"
+            rounded="md"
+          >
+            Contact me{" "}
+          </Button>
+        </Link>
       </Flex>
     </Flex>
   );

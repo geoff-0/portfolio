@@ -1,14 +1,14 @@
 /** @type {import('next-seo').DefaultSeoProps} */
 const defaultSEOConfig = {
-  title: "Geoffrey Perez",
+  title: "Geoffrey Perez | Front-end Web Developer",
   titleTemplate: "%s",
-  defaultTitle: "Geoffrey Perez",
+  defaultTitle: "Geoffrey Perez | Front-end Web Developer",
   description: `A programmer specializing in front-end web development. 
       Emphasizing user experience and intuitive user interfaces.`,
   canonical: "https://geoday.dev",
 
   twitter: {
-    handle: "Geoffrey Perez",
+    handle: "Geoffrey Perez | Front-end Web Developer",
     site: "https://geoday.dev",
     cardType: "summary_large_image",
   },
@@ -23,7 +23,7 @@ const defaultSEOConfig = {
         height: 300,
       },
     ],
-    title: "Geoffrey Perez",
+    title: "Geoffrey Perez | Front-end Web Developer",
 
     description: `A programmer specializing in front-end web development. 
       Emphasizing user experience and intuitive user interfaces.`,

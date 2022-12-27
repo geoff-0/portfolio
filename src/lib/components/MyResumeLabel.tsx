@@ -22,20 +22,20 @@ import ResumeIcon from "lib/icons/ResumeIcon";
 export default function MyResumeLabel(props: any) {
   return (
     <Box p="15px" {...props}>
-      <NextLink href="/Resume_Geoffrey_Perez.pdf" passHref target="_blank">
-        <Link
-          variant="unstyled"
-          h="max-content"
-          _hover={{ color: "brand.primary", fill: "brand.primary" }}
-          transition="color .5s"
-        >
-          <VStack direction="column" gap="10px">
-            <Icon as={ResumeIcon} boxSize="35px" fill="white" />
+      <Link
+        href="/Resume_Geoffrey_Perez.pdf"
+        target="_blank"
+        variant="unstyled"
+        h="max-content"
+        _hover={{ color: "brand.primary", fill: "brand.primary" }}
+        transition="color .5s"
+      >
+        <VStack direction="column" gap="10px">
+          <Icon as={ResumeIcon} boxSize="35px" fill="white" />
 
-            <Text fontWeight="semibold">My Resume</Text>
-          </VStack>
-        </Link>
-      </NextLink>
+          <Text fontWeight="semibold">My Resume</Text>
+        </VStack>
+      </Link>
     </Box>
   );
 }

@@ -44,35 +44,34 @@ export default function ProjectCard(props: {
       w="full"
       gap={{ base: "1rem", md: "4rem" }}
     >
-      <NextLink passHref href={props.demoLink} target="_blank">
-        <Link>
-          <Image
-            alt="placeholder"
-            src={props.image}
-            boxSize="lg"
-            objectFit="cover"
-            opacity="1"
-            transition="opacity .5s"
-            _hover={{ opacity: 0.75 }}
-            rounded="lg"
-            maxH="360px"
-          />
-        </Link>
-      </NextLink>
+      <Link as={NextLink} href={props.demoLink} target="_blank">
+        <Image
+          alt="placeholder"
+          src={props.image}
+          boxSize="lg"
+          objectFit="cover"
+          opacity="1"
+          transition="opacity .5s"
+          _hover={{ opacity: 0.75 }}
+          rounded="lg"
+          maxH="360px"
+        />
+      </Link>
 
       <Stack gap={{ base: "3rem", md: "0" }}>
         <CardBody>
           <Box>
-            <NextLink href={props.demoLink} passHref target="_blank">
-              <Link
-                transition="color .5s"
-                _hover={{ textDecor: "none", color: "brand.primary" }}
-              >
-                <Heading as="h2" mr="auto" mb="1rem">
-                  {props.title}
-                </Heading>
-              </Link>
-            </NextLink>
+            <Link
+              as={NextLink}
+              href={props.demoLink}
+              target="_blank"
+              transition="color .5s"
+              _hover={{ textDecor: "none", color: "brand.primary" }}
+            >
+              <Heading as="h2" mr="auto" mb="1rem">
+                {props.title}
+              </Heading>
+            </Link>
 
             <HStack mb="1rem">
               {Object.keys(props.techStack).map((k) => (
@@ -105,15 +104,26 @@ export default function ProjectCard(props: {
             leftIcon={<AiFillGithub />}
             size="sm"
           >
-            <NextLink href={props.repoLink} passHref target="_blank">
-              <Link _hover={{ textDecoration: "none" }}>Open in Github</Link>
-            </NextLink>
+            <Link
+              as={NextLink}
+              href={props.repoLink}
+              passHref
+              target="_blank"
+              _hover={{ textDecoration: "none" }}
+            >
+              Open in Github
+            </Link>
           </Button>
 
           <Button display={{ base: "flex", md: "none" }} size="sm">
-            <NextLink href={props.repoLink} passHref target="_blank">
-              <Link _hover={{ textDecoration: "none" }}>Open in Github</Link>
-            </NextLink>
+            <Link
+              as={NextLink}
+              href={props.repoLink}
+              target="_blank"
+              _hover={{ textDecoration: "none" }}
+            >
+              Open in Github
+            </Link>
           </Button>
 
           <Button
@@ -121,15 +131,24 @@ export default function ProjectCard(props: {
             leftIcon={<ExternalLinkIcon />}
             size="sm"
           >
-            <NextLink href={props.demoLink} passHref target="_blank">
-              <Link _hover={{ textDecoration: "none" }}>Live Demo</Link>
-            </NextLink>
+            <Link
+              as={NextLink}
+              href={props.demoLink}
+              _hover={{ textDecoration: "none" }}
+            >
+              Live Demo
+            </Link>
           </Button>
 
           <Button display={{ base: "flex", md: "none" }} size="sm">
-            <NextLink href={props.demoLink} passHref target="_blank">
-              <Link _hover={{ textDecoration: "none" }}>Live Demo</Link>
-            </NextLink>
+            <Link
+              as={NextLink}
+              href={props.demoLink}
+              target="_blank"
+              _hover={{ textDecoration: "none" }}
+            >
+              Live Demo
+            </Link>
           </Button>
         </CardFooter>
       </Stack>

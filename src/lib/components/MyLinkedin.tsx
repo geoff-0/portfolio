@@ -24,20 +24,17 @@ export default function MyLinkedIn(props: any) {
       color={colorMode == "light" ? "text.dark" : "text.light"}
       transition=".2s ease-out"
     >
-      <NextLink
+      <Link
+        as={NextLink}
         href="https://www.linkedin.com/in/geoffrey-perez/"
-        passHref
         target="_blank"
+        fill={textColor}
+        _hover={{ fill: "brand.primary" }}
+        transition=".3s ease-out"
+        {...props}
       >
-        <Link
-          fill={textColor}
-          _hover={{ fill: "brand.primary" }}
-          transition=".3s ease-out"
-          {...props}
-        >
-          <Icon as={LinkedInIcon} boxSize="35px" />
-        </Link>
-      </NextLink>
+        <Icon as={LinkedInIcon} boxSize="35px" />
+      </Link>
     </Tooltip>
   );
 }

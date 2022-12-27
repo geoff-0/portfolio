@@ -52,21 +52,21 @@ const Header = () => {
           }
           transition=".5s ease-out, padding .4s ease-out"
         >
-          <NextLink href="https://geoday.dev" passHref>
-            <Link
-              _hover={{ textDecoration: "none", color: "brand.primary" }}
-              h="full"
+          <Link
+            as={NextLink}
+            href="https://geoday.dev"
+            _hover={{ textDecoration: "none", color: "brand.primary" }}
+            h="full"
+          >
+            <Text
+              fontSize={{ base: "sm", md: "lg" }}
+              fontWeight="semibold"
+              letterSpacing="wide"
+              color={textColor}
             >
-              <Text
-                fontSize={{ base: "sm", md: "lg" }}
-                fontWeight="semibold"
-                letterSpacing="wide"
-                color={textColor}
-              >
-                geoday.dev
-              </Text>
-            </Link>
-          </NextLink>
+              geoday.dev
+            </Text>
+          </Link>
 
           <NavItems />
         </Flex>
