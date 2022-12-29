@@ -1,4 +1,5 @@
 import {
+  Box,
   Icon,
   Image,
   Link,
@@ -39,6 +40,7 @@ export default function MyGitHub(props: any) {
             boxSize="35px"
           /> */}
         <Icon as={GitHubIcon} boxSize="35px" />
+        <Box />
       </Link>
     </Tooltip>
   );
