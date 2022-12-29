@@ -1,5 +1,5 @@
 import { Box, Heading, SlideFade, Text, useColorMode } from "@chakra-ui/react";
-import React from "react";
+import { CSSProperties } from "react";
 import MotionBox from "../motion/Box";
 
 export default function Intro(props: any) {
@@ -29,7 +29,7 @@ export default function Intro(props: any) {
             duration: 0.5,
             type: "spring",
             stiffness: 50,
-          } as React.CSSProperties
+          } as CSSProperties
         }
       >
         <Heading
@@ -41,7 +41,7 @@ export default function Intro(props: any) {
           }}
           mb="2.5rem"
         >
-          <Text>{"Geoffrey Perez,"}</Text>
+          <Text>Geoffrey Perez,</Text>
           <Text>A Front-end Developer.</Text>
         </Heading>
       </MotionBox>
