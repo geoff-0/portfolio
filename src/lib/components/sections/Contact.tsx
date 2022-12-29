@@ -11,8 +11,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-import { SkipNavContent } from "@chakra-ui/skip-nav";
-
 import NextLink from "next/link";
 
 import MailIcon from "lib/icons/MailIcon";

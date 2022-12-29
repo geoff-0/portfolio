@@ -10,7 +10,6 @@ import {
   useColorMode,
   VStack,
 } from "@chakra-ui/react";
-import { SkipNavContent } from "@chakra-ui/skip-nav";
 import LinkedIn from "../MyLinkedin";
 import MyGitHub from "../MyGitHub";
 import MyGithub from "../MyGitHub";

@@ -41,6 +41,7 @@ export default function HoverLink({
       href={href}
       variant="ghost"
       flexDir={{ base: "row", md: "column" }}
+      textAlign="center"
       whiteSpace="nowrap"
       scroll={false}
       color={color}

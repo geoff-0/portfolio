@@ -78,6 +78,7 @@ export default function HoverImageLink({
             size="md"
             fontWeight="semibold"
             display={tooltip ? "none" : "unset"}
+            textAlign="center"
           >
             {label}
           </Heading>
