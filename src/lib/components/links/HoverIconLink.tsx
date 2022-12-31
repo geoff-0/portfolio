@@ -10,11 +10,20 @@ import {
   Stack,
   Image,
   Heading,
+  VStack,
+  HStack,
+  Flex,
+  useStyleConfig,
+  Link,
 } from "@chakra-ui/react";
 
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, useState } from "react";
 
-import NextLink from "next/link";
+import MotionBox from "../motion/Box";
+
+import { useMotionValue } from "framer-motion";
+
+import NextLink from "../next/NextLink";
 
 type HoverButtonProps = {
   label?: string;
@@ -35,31 +44,37 @@ export default function HoverLink({
   onClick,
   styles,
 }: HoverButtonProps) {
-  return (
-    <Button
-      as={NextLink}
-      href={href}
-      variant="ghost"
-      flexDir={{ base: "row", md: "column" }}
-      textAlign="center"
-      whiteSpace="nowrap"
-      scroll={false}
-      color={color}
-      fill={color}
-      gap="10px"
-      alignItems="center"
-      _hover={{ color: hoverColor, fill: hoverColor }}
-      onClick={onClick}
-      w="full"
-      h="full"
-      _active={{
-        bg: "none",
-      }}
-      {...styles}
-    >
-      {icon}
+  const componentStyles = useStyleConfig("HoverLink", {});
 
-      <Heading size={{ md: "xs", lg: "sm" }}>{label}</Heading>
-    </Button>
+  return (
+    <MotionBox
+      initial={{
+        y: 0,
+      }}
+      whileHover={{
+        y: -3,
+      }}
+    >
+      <NextLink
+        href={href}
+        _hover={{ textDecor: "none" }}
+        scroll={false}
+        onClick={onClick}
+        {...styles}
+      >
+        <VStack
+          __css={componentStyles}
+          fill={color}
+          color={color}
+          transition=".2s ease-out"
+          _hover={{ color: hoverColor, fill: hoverColor }}
+          {...styles}
+        >
+          {icon}
+
+          <Heading size={{ md: "xs", lg: "sm" }}>{label}</Heading>
+        </VStack>
+      </NextLink>
+    </MotionBox>
   );
 }

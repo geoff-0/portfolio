@@ -8,6 +8,7 @@ import {
   useColorModeValue,
   useColorMode,
   useDisclosure,
+  Heading,
 } from "@chakra-ui/react";
 
 import { useScrollDirection } from "lib/hooks/useScrollDirection";
@@ -17,10 +18,10 @@ import NavItems from "lib/components/navigation/NavItems";
 import NextLink from "next/link";
 import useScrollPosition from "lib/hooks/useScrollPosition";
 import { useEffect, useState } from "react";
+import MotionBox from "lib/components/motion/Box";
 
 const Header = () => {
   const scrollPos = useScrollPosition();
-  const scrollDir = useScrollDirection();
 
   const { colorMode } = useColorMode();
 
@@ -32,45 +33,36 @@ const Header = () => {
   const bgColor = useColorModeValue("background.light", "background.dark");
   const textColor = useColorModeValue("text.light", "text.dark");
 
-  const [isOpen, setOpen] = useState(true);
-
-  useEffect(() => {
-    scrollDir == "up" ? setOpen(true) : setOpen(false);
-  }, [scrollDir]);
-
   return (
     <Box w="full" top="0" position="sticky" zIndex={999} bgColor={bgColor}>
-      <Slide in={isOpen} direction="top">
-        <Flex
-          align="center"
-          px={scrollPos == 0 ? pxt : pxb}
-          pt={scrollPos == 0 ? pyt : pyb}
-          pb="20px"
-          bgColor={bgColor}
-          boxShadow={
-            scrollPos == 0 ? "none" : colorMode == "light" ? "sm" : "lg"
-          }
-          transition=".5s ease-out, padding .4s ease-out"
+      <Flex
+        align="center"
+        px={scrollPos == 0 ? pxt : pxb}
+        pt={scrollPos == 0 ? pyt : pyb}
+        bgColor={bgColor}
+        boxShadow={scrollPos == 0 ? "none" : colorMode == "light" ? "sm" : "xl"}
+        transition=".5s ease-out, padding .4s ease-out"
+      >
+        <Link
+          as={NextLink}
+          href="https://geoday.dev"
+          _hover={{ textDecoration: "none" }}
+          h="full"
+          mt="-10px"
         >
-          <Link
-            as={NextLink}
-            href="https://geoday.dev"
-            _hover={{ textDecoration: "none", color: "brand.primary" }}
-            h="full"
+          <Heading
+            fontSize={{ base: "md", md: "lg" }}
+            letterSpacing="wide"
+            color={textColor}
+            _hover={{ color: "brand.primary" }}
+            transition=".2s ease-out"
           >
-            <Text
-              fontSize={{ base: "sm", md: "lg" }}
-              fontWeight="semibold"
-              letterSpacing="wide"
-              color={textColor}
-            >
-              geoday.dev
-            </Text>
-          </Link>
+            geoday.dev
+          </Heading>
+        </Link>
 
-          <NavItems />
-        </Flex>
-      </Slide>
+        <NavItems />
+      </Flex>
     </Box>
   );
 };

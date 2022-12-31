@@ -11,6 +11,7 @@ import {
   IconButton,
   Slide,
   SlideFade,
+  StyleProps,
   Text,
   useBreakpointValue,
   useColorMode,
@@ -39,8 +40,9 @@ import MoonIcon from "lib/icons/MoonIcon";
 import SunIcon from "lib/icons/SunIcon";
 import ResumeIcon from "lib/icons/ResumeIcon";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import MotionBox from "../motion/Box";
 
-export default function NavItems() {
+export default function NavItems(styles: StyleProps) {
   const navLinks = {
     Home: { href: "/#home", icon: HomeIcon },
     About: { href: "/#about", icon: AboutIcon },
@@ -63,10 +65,10 @@ export default function NavItems() {
   });
 
   return (
-    <Flex ml="auto" w="full">
+    <Flex ml="auto" w="full" transition=".5s ease-out" {...styles}>
       <Flex
         ml="auto"
-        gap={{ base: "3rem", md: "1rem" }}
+        gap={{ base: "3rem", md: "13px" }}
         direction={{ base: "column", md: "row" }}
         display={{ base: "none", md: "none", lg: "flex" }}
       >
@@ -79,7 +81,6 @@ export default function NavItems() {
               icon={
                 <Icon
                   as={navLinks[k as keyof typeof navLinks].icon}
-                  m="0"
                   boxSize="25px"
                   align="center"
                 />
@@ -196,7 +197,11 @@ export default function NavItems() {
                     color={textColor}
                     hoverColor="brand.primary"
                     onClick={() => onClose()}
-                    styles={{ h: itemH, w: "full", target: "_blank" }}
+                    styles={{
+                      h: itemH,
+                      w: "full",
+                      target: "_blank",
+                    }}
                   />
 
                   <HoverIconLink
