@@ -133,7 +133,9 @@ export default function NavItems() {
           as={HamburgerIcon}
           aria-label="Menu"
           variant="unstyled"
+          _hover={{ color: "brand.primary" }}
           ml="auto"
+          transition="0.3s ease-out"
           onClick={(e) => {
             e.currentTarget.style.fill = "brand.primary";
             onToggle();

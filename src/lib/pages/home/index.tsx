@@ -8,7 +8,6 @@ import {
 } from "@chakra-ui/react";
 import { LogoJsonLd, NextSeo } from "next-seo";
 
-import SomeImage from "lib/components/samples/SomeImage";
 import Intro from "lib/components/sections/Intro";
 import Projects from "lib/components/sections/Projects";
 import TechStack from "lib/components/sections/TechStack";

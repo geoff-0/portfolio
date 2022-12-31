@@ -32,9 +32,8 @@ export default function Contact() {
         <Text color={colorMode == "light" ? "gray.600" : "gray.400"}>
           {"I am actively seeking employment."}
           <br />
-          {
-            "If you feel I would be a good fit for your needs, please feel free to contact me with the button below. I would be more than glad to talk to you."
-          }
+          {`I am actively seeking employment.
+If you feel I would be a good fit for your needs, don't hesitate to contact me with the button below. I would be more than glad to talk to you.`}
         </Text>
 
         <Link

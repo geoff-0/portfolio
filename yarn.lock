@@ -886,7 +886,7 @@
     "core-js-pure" "^3.25.1"
     "regenerator-runtime" "^0.13.11"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.9", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.17.8", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.9", "@babel/runtime@^7.8.4":
   "integrity" "sha512-UF0tvkUtxwAgZ5W/KrkHf0Rn0fdnLDU9ScxBrEVNUprE/MzirjK4MJUX1/BVDv00Sv8cljtukVK1aky++X1SjQ=="
   "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.20.7.tgz"
   "version" "7.20.7"
@@ -2245,6 +2245,20 @@
   "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.6.tgz"
   "version" "2.11.6"
 
+"@react-three/fiber@^8.2.2", "@react-three/fiber@^8.9.2":
+  "integrity" "sha512-uhDQvxUZ0M2SU/gAtY2tcEaa+Pp9JSDmSzm7Dw6q9/KMReqcImNLjPzkjVsWV5DKP7fELC6c4Bgs9sVIahM6LQ=="
+  "resolved" "https://registry.npmjs.org/@react-three/fiber/-/fiber-8.9.2.tgz"
+  "version" "8.9.2"
+  dependencies:
+    "@babel/runtime" "^7.17.8"
+    "@types/react-reconciler" "^0.26.7"
+    "its-fine" "^1.0.6"
+    "react-reconciler" "^0.27.0"
+    "react-use-measure" "^2.1.1"
+    "scheduler" "^0.21.0"
+    "suspend-react" "^0.0.8"
+    "zustand" "^3.7.1"
+
 "@rollup/plugin-babel@^5.2.0":
   "integrity" "sha512-WFfdLWU/xVWKeRQnKmIAQULUI7Il0gZnBIH/ZFO069wYIfPu+8zrfp/KMW0atmELoRDq8FbiP3VCss9MhCut7Q=="
   "resolved" "https://registry.npmjs.org/@rollup/plugin-babel/-/plugin-babel-5.3.1.tgz"
@@ -2453,7 +2467,21 @@
   "resolved" "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz"
   "version" "15.7.5"
 
-"@types/react@^16.8.0 || ^17.0.0 || ^18.0.0", "@types/react@^16.9.0 || ^17.0.0 || ^18.0.0", "@types/react@^18.0.25":
+"@types/react-reconciler@^0.26.7":
+  "integrity" "sha512-mBDYl8x+oyPX/VBb3E638N0B7xG+SPk/EAMcVPeexqus/5aTpTphQi0curhhshOqRrc9t6OPoJfEUkbymse/lQ=="
+  "resolved" "https://registry.npmjs.org/@types/react-reconciler/-/react-reconciler-0.26.7.tgz"
+  "version" "0.26.7"
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-reconciler@^0.28.0":
+  "integrity" "sha512-5cjk9ottZAj7eaTsqzPUIlrVbh3hBAO2YaEL1rkjHKB3xNAId7oU8GhzvAX+gfmlfoxTwJnBjPxEHyxkEA1Ffg=="
+  "resolved" "https://registry.npmjs.org/@types/react-reconciler/-/react-reconciler-0.28.0.tgz"
+  "version" "0.28.0"
+  dependencies:
+    "@types/react" "*"
+
+"@types/react@*", "@types/react@^16.8.0 || ^17.0.0 || ^18.0.0", "@types/react@^16.9.0 || ^17.0.0 || ^18.0.0", "@types/react@^18.0.25":
   "integrity" "sha512-hCR3PJQsAIXyxhTNSiDFY//LhnMZWpNNr5etoCqx/iUfGc5gXWtQR2Phl908jVR6uPXacojQWTg4qRpkxTuGug=="
   "resolved" "https://registry.npmjs.org/@types/react/-/react-18.0.26.tgz"
   "version" "18.0.26"
@@ -3772,6 +3800,11 @@
   "resolved" "https://registry.npmjs.org/dateformat/-/dateformat-3.0.3.tgz"
   "version" "3.0.3"
 
+"debounce@^1.2.1":
+  "integrity" "sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug=="
+  "resolved" "https://registry.npmjs.org/debounce/-/debounce-1.2.1.tgz"
+  "version" "1.2.1"
+
 "debug@^2.6.9":
   "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
   "resolved" "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz"
@@ -4567,10 +4600,29 @@
   dependencies:
     "tslib" "^2.0.3"
 
+"framer-motion-3d@^8.0.2":
+  "integrity" "sha512-P/LG2B9ATRi0Vg98RRwN+Gm0hGXPjep1TPS0AaN8tXEDvXSA3VdaQc6ORQWK4KnPUMxSQEHZDRFvUXTOPGFN2A=="
+  "resolved" "https://registry.npmjs.org/framer-motion-3d/-/framer-motion-3d-8.0.2.tgz"
+  "version" "8.0.2"
+  dependencies:
+    "framer-motion" "^8.0.2"
+    "react-merge-refs" "^2.0.1"
+
 "framer-motion@^7.6.9", "framer-motion@>=4.0.0":
   "integrity" "sha512-k2ccYeZNSpPg//HTaqrU+4pRq9f9ZpaaN7rr0+Rx5zA4wZLbk547wtDzge2db1sB+1mnJ6r59P4xb+aEIi/W+w=="
   "resolved" "https://registry.npmjs.org/framer-motion/-/framer-motion-7.10.3.tgz"
   "version" "7.10.3"
+  dependencies:
+    "@motionone/dom" "^10.15.3"
+    "hey-listen" "^1.0.8"
+    "tslib" "2.4.0"
+  optionalDependencies:
+    "@emotion/is-prop-valid" "^0.8.2"
+
+"framer-motion@^8.0.2":
+  "integrity" "sha512-xuIiQchVh/cLqUzzu5/8ok4o0nkwYPyIRtkDl8wDvrQUNRhSfRaZu1MMdzN0TjpBtG66oP03PSLO7Qtu1YqPrA=="
+  "resolved" "https://registry.npmjs.org/framer-motion/-/framer-motion-8.0.2.tgz"
+  "version" "8.0.2"
   dependencies:
     "@motionone/dom" "^10.15.3"
     "hey-listen" "^1.0.8"
@@ -5404,6 +5456,13 @@
   "integrity" "sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw=="
   "resolved" "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz"
   "version" "2.0.0"
+
+"its-fine@^1.0.6":
+  "integrity" "sha512-MagTA9/J6kN3aEQsQu6by3nyrttCm0whCOYo4SfiNzOfYgcr1cb29mJ3zgluaJboaWOL/lHzJeMXi/QGSCfX1Q=="
+  "resolved" "https://registry.npmjs.org/its-fine/-/its-fine-1.0.8.tgz"
+  "version" "1.0.8"
+  dependencies:
+    "@types/react-reconciler" "^0.28.0"
 
 "jake@^10.8.5":
   "integrity" "sha512-sVpxYeuAhWt0OTWITwT98oyV0GsXyMlXCF+3L1SuafBVUIr/uILGRB+NqwkzhgXKvoJpDIpQvqkUALgdmQsQxw=="
@@ -6577,7 +6636,7 @@
   dependencies:
     "@babel/runtime" "^7.12.13"
 
-"react-dom@^18.0.0", "react-dom@^18.2.0", "react-dom@>=16.0.0", "react-dom@>=18":
+"react-dom@^18.0.0", "react-dom@^18.2.0", "react-dom@>=16.0.0", "react-dom@>=16.13", "react-dom@>=18", "react-dom@>=18.0":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -6612,6 +6671,19 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
 
+"react-merge-refs@^2.0.1":
+  "integrity" "sha512-pywF6oouJWuqL26xV3OruRSIqai31R9SdJX/I3gP2q8jLxUnA1IwXcLW8werUHLZOrp4N7YOeQNZrh/BKrHI4A=="
+  "resolved" "https://registry.npmjs.org/react-merge-refs/-/react-merge-refs-2.0.1.tgz"
+  "version" "2.0.1"
+
+"react-reconciler@^0.27.0":
+  "integrity" "sha512-HmMDKciQjYmBRGuuhIaKA1ba/7a+UsM5FzOZsMO2JYHt9Jh8reCb7j1eDC95NOyUlKM9KRyvdx0flBuDvYSBoA=="
+  "resolved" "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.27.0.tgz"
+  "version" "0.27.0"
+  dependencies:
+    "loose-envify" "^1.1.0"
+    "scheduler" "^0.21.0"
+
 "react-remove-scroll-bar@^2.3.3":
   "integrity" "sha512-63C4YQBUt0m6ALadE9XV56hV8BgJWDmmTPY758iIJjfQKt2nYwoUrPk0LXRXcB/yIj82T1/Ixfdpdk68LwIB0A=="
   "resolved" "https://registry.npmjs.org/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.4.tgz"
@@ -6640,7 +6712,22 @@
     "invariant" "^2.2.4"
     "tslib" "^2.0.0"
 
-"react@*", "react@^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18.0.0", "react@^18.0.0", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=16.0.0", "react@>=16.8.0", "react@>=18":
+"react-tsparticles@^2.7.1":
+  "integrity" "sha512-r3ogLLkob11KDsXSC8EsvgPgDutmmNOMqYiD1KLRoSz5t1W3WODs3eS370Bzr9bgRjYZSajTHeT5cXMzY1G/Gg=="
+  "resolved" "https://registry.npmjs.org/react-tsparticles/-/react-tsparticles-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "fast-deep-equal" "^3.1.3"
+    "tsparticles-engine" "^2.7.1"
+
+"react-use-measure@^2.1.1":
+  "integrity" "sha512-nocZhN26cproIiIduswYpV5y5lQpSQS1y/4KuvUCjSKmw7ZWIS/+g3aFnX3WdBkyuGUtTLif3UTqnLLhbDoQig=="
+  "resolved" "https://registry.npmjs.org/react-use-measure/-/react-use-measure-2.1.1.tgz"
+  "version" "2.1.1"
+  dependencies:
+    "debounce" "^1.2.1"
+
+"react@*", "react@^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18.0.0", "react@^18.0.0", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=16", "react@>=16.0.0", "react@>=16.13", "react@>=16.8", "react@>=16.8.0", "react@>=17.0", "react@>=18", "react@>=18.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
@@ -6956,6 +7043,13 @@
     "chokidar" ">=3.0.0 <4.0.0"
     "immutable" "^4.0.0"
     "source-map-js" ">=0.6.2 <2.0.0"
+
+"scheduler@^0.21.0":
+  "integrity" "sha512-1r87x5fz9MXqswA2ERLo0EbOAU74DpIUO090gIasYTqlVoJeMcl+Z1Rg7WHz+qtPujhS/hGIt9kxZOYBV3faRQ=="
+  "resolved" "https://registry.npmjs.org/scheduler/-/scheduler-0.21.0.tgz"
+  "version" "0.21.0"
+  dependencies:
+    "loose-envify" "^1.1.0"
 
 "scheduler@^0.23.0":
   "integrity" "sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw=="
@@ -7399,6 +7493,11 @@
   "resolved" "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   "version" "1.0.0"
 
+"suspend-react@^0.0.8":
+  "integrity" "sha512-ZC3r8Hu1y0dIThzsGw0RLZplnX9yXwfItcvaIzJc2VQVi8TGyGDlu92syMB5ulybfvGLHAI5Ghzlk23UBPF8xg=="
+  "resolved" "https://registry.npmjs.org/suspend-react/-/suspend-react-0.0.8.tgz"
+  "version" "0.0.8"
+
 "synckit@^0.8.4":
   "integrity" "sha512-Dn2ZkzMdSX827QbowGbU/4yjWuvNaCoScLLoMo/yKbu+P4GBR6cRGKZH27k6a9bRzdqcyd1DE96pQtQ6uNkmyw=="
   "resolved" "https://registry.npmjs.org/synckit/-/synckit-0.8.4.tgz"
@@ -7457,6 +7556,11 @@
   "integrity" "sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw=="
   "resolved" "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz"
   "version" "0.2.0"
+
+"three@^0.148.0", "three@>=0.133":
+  "integrity" "sha512-8uzVV+qhTPi0bOFs/3te3RW6hb3urL8jYEl6irjCWo/l6sr8MPNMcClFev/MMYeIxr0gmDcoXTy/8LXh/LXkfw=="
+  "resolved" "https://registry.npmjs.org/three/-/three-0.148.0.tgz"
+  "version" "0.148.0"
 
 "through@^2.3.6", "through@^2.3.8", "through@>=2.2.7 <3", "through@2":
   "integrity" "sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg=="
@@ -7584,6 +7688,338 @@
   "integrity" "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz"
   "version" "2.4.0"
+
+"tsparticles-engine@^2.7.1":
+  "integrity" "sha512-iUjaagXDyYuJi107yADrLegIQ1jHe658JJQUv6+Fd/DRLrmuBU4XrzaxlERv72LHUrZtk1E/WmnOpeIw1AJzFQ=="
+  "resolved" "https://registry.npmjs.org/tsparticles-engine/-/tsparticles-engine-2.7.1.tgz"
+  "version" "2.7.1"
+
+"tsparticles-interaction-external-attract@^2.7.1":
+  "integrity" "sha512-Jjs4MKajd7RFzwQd8BlyKXLar8RpnmN2g89v9+g0XgsUeh/kw/aDu7kITzX2JbKpSe72jlIt465ZeWprxC5vMw=="
+  "resolved" "https://registry.npmjs.org/tsparticles-interaction-external-attract/-/tsparticles-interaction-external-attract-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-interaction-external-bounce@^2.7.1":
+  "integrity" "sha512-HIsuxuLaPcQWByjzysmvOVTgdhgVdFl63IMFuxNUUTiFG5Fbr4e6SwBgjyQzksZCmUzR7k0KczXTQBqSNraCcA=="
+  "resolved" "https://registry.npmjs.org/tsparticles-interaction-external-bounce/-/tsparticles-interaction-external-bounce-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-interaction-external-bubble@^2.7.1":
+  "integrity" "sha512-m1LlIkW/V+uGDDG8q7c0km2BgkUQeBlxyndOPvWiS+61rCruMR/l1nshcss7H+lC7TVOlKPp5VEfdvH1BL2uXg=="
+  "resolved" "https://registry.npmjs.org/tsparticles-interaction-external-bubble/-/tsparticles-interaction-external-bubble-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-interaction-external-connect@^2.7.1":
+  "integrity" "sha512-U1XQaNpT6vjQ/jc7U78AxMx+Zy5NQeVQmGZKa5hXrHNt974HEmJPFur5zQs2gWVv3p3sCLkXYB86/UU+Zt8lWQ=="
+  "resolved" "https://registry.npmjs.org/tsparticles-interaction-external-connect/-/tsparticles-interaction-external-connect-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-interaction-external-grab@^2.7.1":
+  "integrity" "sha512-SIzcN64zN4us19lddB6P+jygTSK7C9VUxzzhk+Q7FuSB/ThubOZCJZpI79LgRS06N4iCUusbBJKQCv+Otfi3Vg=="
+  "resolved" "https://registry.npmjs.org/tsparticles-interaction-external-grab/-/tsparticles-interaction-external-grab-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-interaction-external-pause@^2.7.1":
+  "integrity" "sha512-pAV84JSELFQQtZd65H7+CbN7V7COSp+SWLfqP7GNMt3U6LDDeHwM0Su9e7QaDd0JO42ofQu8r/P4QBrwBDdRCw=="
+  "resolved" "https://registry.npmjs.org/tsparticles-interaction-external-pause/-/tsparticles-interaction-external-pause-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-interaction-external-push@^2.7.1":
+  "integrity" "sha512-Ojg7/w2cElZ2qzR78uXDJWiVUxs1yzB5zLaYPFxI3hat63GsX1+1jWL4YMV1cb3BEpzOK+Tck+l+LtBeNQ3sLA=="
+  "resolved" "https://registry.npmjs.org/tsparticles-interaction-external-push/-/tsparticles-interaction-external-push-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-interaction-external-remove@^2.7.1":
+  "integrity" "sha512-KJV+WUW2xR+ym4nzgYKIOiKB5a/WZr8aKA6f8ug7xAAPFyTGAye+rWYNf3RdFoziqLe86M+YFOteOg3VKTlrSA=="
+  "resolved" "https://registry.npmjs.org/tsparticles-interaction-external-remove/-/tsparticles-interaction-external-remove-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-interaction-external-repulse@^2.7.1":
+  "integrity" "sha512-VThfYODxxhEeuR9oc+914qjTEv0bpG/IDkNLKyCdcr3N/Zf5MJqvrSXmHumPuD6a82lzMUukO12HNVkIUbtTbw=="
+  "resolved" "https://registry.npmjs.org/tsparticles-interaction-external-repulse/-/tsparticles-interaction-external-repulse-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-interaction-external-slow@^2.7.1":
+  "integrity" "sha512-Gb9xzGrAr2uEB3kvICz8oMjDZ76dJ/yeaLwWIrMnqjcs2xFhc0JpXjHFISxzujvY52O8uTJVzLn6Cq4IaMOHZw=="
+  "resolved" "https://registry.npmjs.org/tsparticles-interaction-external-slow/-/tsparticles-interaction-external-slow-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-interaction-external-trail@^2.7.1":
+  "integrity" "sha512-5iBPCWeEBZTuzyVOZ6+PwZHV8+P4E1I1c4ymnORl4AVznOu9heCe96vNGzH06T7YJpK/aSXtx8ppLRBdRyNvZQ=="
+  "resolved" "https://registry.npmjs.org/tsparticles-interaction-external-trail/-/tsparticles-interaction-external-trail-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-interaction-particles-attract@^2.7.1":
+  "integrity" "sha512-DYpO4BdXpKgLczd6Znxh5ma2LL7KYZcDpm28StQUKsnE8Q5QRaMsvXAQMLpUR+3b9fkDswuoxy0lq8RkhMXNuA=="
+  "resolved" "https://registry.npmjs.org/tsparticles-interaction-particles-attract/-/tsparticles-interaction-particles-attract-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-interaction-particles-collisions@^2.7.1":
+  "integrity" "sha512-AyVvZxcdb3LUdqxNePRVS9sA0+uP91mZidWwA5xTMfXK7kp3vWyHYKEkSN4BRFs4L3QYjFEgf56LnxKdc4wM0g=="
+  "resolved" "https://registry.npmjs.org/tsparticles-interaction-particles-collisions/-/tsparticles-interaction-particles-collisions-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-interaction-particles-links@^2.7.1":
+  "integrity" "sha512-ugHzaONF3sFzD+44oToQbthbewj7HUfakMJ7WS+iba5IF0qmA4d95cuipjhONiiqbgD7zk8uALyeTqZUkFTffw=="
+  "resolved" "https://registry.npmjs.org/tsparticles-interaction-particles-links/-/tsparticles-interaction-particles-links-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-move-base@^2.7.1":
+  "integrity" "sha512-RqxMN0j/YzPOABeKNOsvQ9cgGeoQKWV1pl9sInCUzvyOpKjeXtv+dN4+NjF6s78hcVYt3yFKmr4jsaD0RJBpNw=="
+  "resolved" "https://registry.npmjs.org/tsparticles-move-base/-/tsparticles-move-base-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-move-parallax@^2.7.1":
+  "integrity" "sha512-B4D8FTDzaR6vpY9+aCa2pBZhqsHgijdrIuH7QgzF4Q2AWULeYfXwaA1SHf7krY9jwHPKDUfHI5QqpcRyzEu7Xg=="
+  "resolved" "https://registry.npmjs.org/tsparticles-move-parallax/-/tsparticles-move-parallax-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-particles.js@^2.7.1":
+  "integrity" "sha512-sHK9clm2qUJbxqra7djl2x7ZIY6QHUGMNGq4HF7K33i/vzjcN3ODZMqITAX+GNz9OuqViF9q9HZ20Z4nwxUl/g=="
+  "resolved" "https://registry.npmjs.org/tsparticles-particles.js/-/tsparticles-particles.js-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-plugin-absorbers@^2.7.1":
+  "integrity" "sha512-nh0MOSdYTkEsl/hIrxUCRV/9mRvh1LJjHKIAHg/V/5S03xITLF3Au9PaUrH4q9hoZbKinQqfW/+TWcfdDHVmrQ=="
+  "resolved" "https://registry.npmjs.org/tsparticles-plugin-absorbers/-/tsparticles-plugin-absorbers-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-plugin-easing-quad@^2.7.1":
+  "integrity" "sha512-nM7gffi7cvVxL0Xa50FG9Lk72F2Q1pOeMroGVZgb0reDtlUgihGXrZwW2shnrSa6/owDrFMpi5T0UaDbyS5JOg=="
+  "resolved" "https://registry.npmjs.org/tsparticles-plugin-easing-quad/-/tsparticles-plugin-easing-quad-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-plugin-emitters@^2.7.1":
+  "integrity" "sha512-8R8KZw/MewiJQm/551KVgJvGtcxotZY6OveXWGvRkZmrrkBprJnxZH7CbQuQ7u/8Vy6HTJ1kBhr4XpxRAIumfA=="
+  "resolved" "https://registry.npmjs.org/tsparticles-plugin-emitters/-/tsparticles-plugin-emitters-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-shape-circle@^2.7.1":
+  "integrity" "sha512-rTNjH8EwP1tL+oOqgu8b0FDdhGKXDPBVqRIew6H3APVVP/5HNbVb9fwpBPLvHtHC0cpfg/WgXanx9QqZxrEXWQ=="
+  "resolved" "https://registry.npmjs.org/tsparticles-shape-circle/-/tsparticles-shape-circle-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-shape-image@^2.7.1":
+  "integrity" "sha512-mvzd0hwTdYNe7+wh7+u5hG0v0DmTVnk3zAAcKmv7lR5qesW3mms2GntwhmyV/CSThYsk33T25fl5xa7G7ZKQVg=="
+  "resolved" "https://registry.npmjs.org/tsparticles-shape-image/-/tsparticles-shape-image-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-shape-line@^2.7.1":
+  "integrity" "sha512-u1/OeVM3zKGZWzPlX2qxh8MvAZP6D96NtlRLfa2akX4HD2gfVgSucocdFAIaXnVrtTdWK7YQeMmyaj+j9SRwpA=="
+  "resolved" "https://registry.npmjs.org/tsparticles-shape-line/-/tsparticles-shape-line-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-shape-polygon@^2.7.1":
+  "integrity" "sha512-8F7MGEeiAEbQPQiNtUTjzju42bv7vyb0JFc+HpZaEQCYKOOOkpo6hBCok/PLJ1Gu6n/86LrbXcbOc2X1cA1Ovw=="
+  "resolved" "https://registry.npmjs.org/tsparticles-shape-polygon/-/tsparticles-shape-polygon-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-shape-square@^2.7.1":
+  "integrity" "sha512-HMsQVO8D+oMVMP74Q8HFje3oP6bEcu9hse78osLgFCmm6/FDtJw+qk41e8I6GHSKBXYN5o5J3bInUk5yJdWtPQ=="
+  "resolved" "https://registry.npmjs.org/tsparticles-shape-square/-/tsparticles-shape-square-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-shape-star@^2.7.1":
+  "integrity" "sha512-mrFeQut1RH3YytCNsdOApeH+ow+4bwUQQuyNwbdRGZbElaRtAm4DzLMpHl50okoSs8Z9e1gFK1HAXxb8FOmCWg=="
+  "resolved" "https://registry.npmjs.org/tsparticles-shape-star/-/tsparticles-shape-star-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-shape-text@^2.7.1":
+  "integrity" "sha512-ZX/c4EHDdPKZsdHegwrmHQCAzyzzG30dLEMq1AUtgn0DW75TpgVRAGooBmwInYUBlyZJ/3T3OA38vVlpUAD4oQ=="
+  "resolved" "https://registry.npmjs.org/tsparticles-shape-text/-/tsparticles-shape-text-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-slim@^2.7.1":
+  "integrity" "sha512-OqXFceVKnevz67V9Mglc2DgloxU047D3jjlBlb1Yz1/i6s60lAu+XigFyQtagcnYDTxNuuI2vJzP+sewT+22uw=="
+  "resolved" "https://registry.npmjs.org/tsparticles-slim/-/tsparticles-slim-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+    "tsparticles-interaction-external-attract" "^2.7.1"
+    "tsparticles-interaction-external-bounce" "^2.7.1"
+    "tsparticles-interaction-external-bubble" "^2.7.1"
+    "tsparticles-interaction-external-connect" "^2.7.1"
+    "tsparticles-interaction-external-grab" "^2.7.1"
+    "tsparticles-interaction-external-pause" "^2.7.1"
+    "tsparticles-interaction-external-push" "^2.7.1"
+    "tsparticles-interaction-external-remove" "^2.7.1"
+    "tsparticles-interaction-external-repulse" "^2.7.1"
+    "tsparticles-interaction-external-slow" "^2.7.1"
+    "tsparticles-interaction-particles-attract" "^2.7.1"
+    "tsparticles-interaction-particles-collisions" "^2.7.1"
+    "tsparticles-interaction-particles-links" "^2.7.1"
+    "tsparticles-move-base" "^2.7.1"
+    "tsparticles-move-parallax" "^2.7.1"
+    "tsparticles-particles.js" "^2.7.1"
+    "tsparticles-plugin-easing-quad" "^2.7.1"
+    "tsparticles-shape-circle" "^2.7.1"
+    "tsparticles-shape-image" "^2.7.1"
+    "tsparticles-shape-line" "^2.7.1"
+    "tsparticles-shape-polygon" "^2.7.1"
+    "tsparticles-shape-square" "^2.7.1"
+    "tsparticles-shape-star" "^2.7.1"
+    "tsparticles-shape-text" "^2.7.1"
+    "tsparticles-updater-angle" "^2.7.1"
+    "tsparticles-updater-color" "^2.7.1"
+    "tsparticles-updater-life" "^2.7.1"
+    "tsparticles-updater-opacity" "^2.7.1"
+    "tsparticles-updater-out-modes" "^2.7.1"
+    "tsparticles-updater-size" "^2.7.1"
+    "tsparticles-updater-stroke-color" "^2.7.1"
+
+"tsparticles-updater-angle@^2.7.1":
+  "integrity" "sha512-619dYwTtvzBDMKkXibGksk15RdxEYtwZAdxviX2CRsq+ysYRkOzepgp/L1Oj/KAwrP19ztyOOLJlkO39pkDvzQ=="
+  "resolved" "https://registry.npmjs.org/tsparticles-updater-angle/-/tsparticles-updater-angle-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-updater-color@^2.7.1":
+  "integrity" "sha512-0xxIGdYTpMnG1l6xpCo3FsIlQTuThH+FqsWjtPOb3HTLL7Z2gPbaQAwjVJwZ9VYfIwz3GhdjWXK6P9/iXLBzrA=="
+  "resolved" "https://registry.npmjs.org/tsparticles-updater-color/-/tsparticles-updater-color-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-updater-destroy@^2.7.1":
+  "integrity" "sha512-xWV3CXDdVP56nggZipDd5wzkM6lZ6cVjCHuA3UmjkUkV3zEU2mmzAfnKZPjz0w6f+8g6sn7IDlrWD8wL3FKQvA=="
+  "resolved" "https://registry.npmjs.org/tsparticles-updater-destroy/-/tsparticles-updater-destroy-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-updater-life@^2.7.1":
+  "integrity" "sha512-bLgMe/CUo77Fw108EbQ2GN0wb4Y2FXIbpcv3N3wN51eDB6cvqI8rXDYnrKHzfe23Fs9BaZ+8cCMPnsBeASuSPg=="
+  "resolved" "https://registry.npmjs.org/tsparticles-updater-life/-/tsparticles-updater-life-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-updater-opacity@^2.7.1":
+  "integrity" "sha512-ELlZHFJZrUaiW+h5x4IZ5Gkog6FaBz9rHdlqcQaXTJnDvdXTR6qe8Au9B6aL6DnOidJ1mRacTf8IcpGchpFqXw=="
+  "resolved" "https://registry.npmjs.org/tsparticles-updater-opacity/-/tsparticles-updater-opacity-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-updater-out-modes@^2.7.1":
+  "integrity" "sha512-HbwFoDFYPv77x6P3uDCgg2WuMXeQnLmd6m3HVSwvsFd5/PDdkunQljGmsEG36ZRHRWIaXtBDq5m5vB15gvlz6Q=="
+  "resolved" "https://registry.npmjs.org/tsparticles-updater-out-modes/-/tsparticles-updater-out-modes-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-updater-roll@^2.7.1":
+  "integrity" "sha512-EP+4waqzufALY+ANUggI+m7UtR+1vkrREYVS7yY4oQNDBGkbx+DMb5GlwAF3R1Q2Y2Q0uBynSiTEE1q0UVaUpw=="
+  "resolved" "https://registry.npmjs.org/tsparticles-updater-roll/-/tsparticles-updater-roll-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-updater-size@^2.7.1":
+  "integrity" "sha512-Sy9Tkq8AkdbasxgrCzouMc8triS03ZLJ9vrp0OrKd/15e9oOJ7knTYDZtNb13IgAt2K0gKt5YvXYYTiQBPXveA=="
+  "resolved" "https://registry.npmjs.org/tsparticles-updater-size/-/tsparticles-updater-size-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-updater-stroke-color@^2.7.1":
+  "integrity" "sha512-j+jch5B9DYv8CEG/i45ib5DRn6Jklyfju8bRi5WpFRgQTO4feW/BwGcWbmUY6g048Rl3G4YD6SvQgaDyCj2W3Q=="
+  "resolved" "https://registry.npmjs.org/tsparticles-updater-stroke-color/-/tsparticles-updater-stroke-color-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-updater-tilt@^2.7.1":
+  "integrity" "sha512-AqZDQzEsLzY5dy7mSqJUA3+aG166+3QLwjM1oRrL9ZFR1EM5L6fH72Z69HsIvFD++eCMsmfhRX5NGf/arrH5CQ=="
+  "resolved" "https://registry.npmjs.org/tsparticles-updater-tilt/-/tsparticles-updater-tilt-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-updater-twinkle@^2.7.1":
+  "integrity" "sha512-v/C3UMUzw8T6weV4UC4Mwf31OAcYDcxvhaLUkD5KHOsDJnE/4c5moq743Spu0CURqA73OUxn6Vi1Ow6tAmQH3A=="
+  "resolved" "https://registry.npmjs.org/tsparticles-updater-twinkle/-/tsparticles-updater-twinkle-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles-updater-wobble@^2.7.1":
+  "integrity" "sha512-dsIFA4bbZZ5cviZFk08x5+E2gDLWm3zximUU1m0yPgtY3TEfdOzkuIFX2qDyhuHzMLWOBojSdezexxfMoIix/w=="
+  "resolved" "https://registry.npmjs.org/tsparticles-updater-wobble/-/tsparticles-updater-wobble-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+
+"tsparticles@^2.7.1":
+  "integrity" "sha512-W8hVaUBnXOGHiaJfgFCpgYd0aisp5j4Pv/Oo+K21B5GzpGudi6XbwGAK8GX5x214yQG8VM3+uGUIRnha97DVtg=="
+  "resolved" "https://registry.npmjs.org/tsparticles/-/tsparticles-2.7.1.tgz"
+  "version" "2.7.1"
+  dependencies:
+    "tsparticles-engine" "^2.7.1"
+    "tsparticles-interaction-external-trail" "^2.7.1"
+    "tsparticles-plugin-absorbers" "^2.7.1"
+    "tsparticles-plugin-emitters" "^2.7.1"
+    "tsparticles-slim" "^2.7.1"
+    "tsparticles-updater-destroy" "^2.7.1"
+    "tsparticles-updater-roll" "^2.7.1"
+    "tsparticles-updater-tilt" "^2.7.1"
+    "tsparticles-updater-twinkle" "^2.7.1"
+    "tsparticles-updater-wobble" "^2.7.1"
 
 "tsutils@^3.21.0":
   "integrity" "sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA=="
@@ -8185,3 +8621,8 @@
   "integrity" "sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q=="
   "resolved" "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   "version" "0.1.0"
+
+"zustand@^3.7.1":
+  "integrity" "sha512-PIJDIZKtokhof+9+60cpockVOq05sJzHCriyvaLBmEJixseQ1a5Kdov6fWZfWOu5SK9c+FhH1jU0tntLxRJYMA=="
+  "resolved" "https://registry.npmjs.org/zustand/-/zustand-3.7.2.tgz"
+  "version" "3.7.2"
