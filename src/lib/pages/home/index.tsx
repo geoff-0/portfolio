@@ -26,16 +26,16 @@ const Home = () => {
       mx="auto"
       overflow="hidden"
     >
-      <Box w={{ base: "85%", lg: "75%", xl: "70%" }}>
-        <Box pt="30vh" pb="60vh" textAlign="left">
+      <Box w={{ base: "80%", lg: "75%", xl: "65%" }}>
+        <Box pt="18vh" pb="60vh" textAlign="left">
           <Intro />
         </Box>
 
-        <About pb="10rem" />
+        <About py="5rem" />
 
-        <TechStack pb="10rem" />
+        <TechStack py="10rem" />
 
-        <Projects pb="10rem" />
+        <Projects py="10rem" />
 
         <Contact />
       </Box>

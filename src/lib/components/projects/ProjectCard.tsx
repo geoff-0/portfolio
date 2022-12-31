@@ -58,8 +58,8 @@ export default function ProjectCard(props: {
         />
       </Link>
 
-      <Stack gap={{ base: "3rem", md: "0" }}>
-        <CardBody>
+      <Stack gap={{ base: "3rem", md: "0" }} w="full">
+        <CardBody w="full">
           <Box>
             <Link
               as={NextLink}
