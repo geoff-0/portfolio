@@ -28,7 +28,7 @@ const Header = () => {
   const pxt = useBreakpointValue({ base: "40px", md: "70px" });
   const pxb = useBreakpointValue({ base: "30px", md: "60px" });
   const pyt = useBreakpointValue({ base: "25px", md: "35px" });
-  const pyb = useBreakpointValue({ base: "10px", md: "20px" });
+  const pyb = useBreakpointValue({ base: "15px", md: "20px" });
 
   const bgColor = useColorModeValue("background.light", "background.dark");
   const textColor = useColorModeValue("text.light", "text.dark");
