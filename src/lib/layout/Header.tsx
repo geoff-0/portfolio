@@ -39,6 +39,7 @@ const Header = () => {
         align="center"
         px={scrollPos == 0 ? pxt : pxb}
         pt={scrollPos == 0 ? pyt : pyb}
+        pb="10px"
         bgColor={bgColor}
         boxShadow={scrollPos == 0 ? "none" : colorMode == "light" ? "sm" : "xl"}
         transition=".5s ease-out, padding .4s ease-out"
