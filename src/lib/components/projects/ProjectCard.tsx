@@ -44,22 +44,28 @@ export default function ProjectCard(props: {
       w="full"
       gap={{ base: "1rem", md: "4rem" }}
     >
-      <Link as={NextLink} href={props.demoLink} target="_blank">
+      <Link
+        as={NextLink}
+        href={props.demoLink}
+        target="_blank"
+        w={{ base: "full", md: "50%" }}
+        _hover={{ opacity: 0.75 }}
+      >
         <Image
           alt="placeholder"
+          mx="auto"
           src={props.image}
           boxSize="lg"
-          objectFit="cover"
           opacity="1"
+          objectFit="cover"
           transition="opacity .5s"
-          _hover={{ opacity: 0.75 }}
           rounded="lg"
           maxH="360px"
         />
       </Link>
 
-      <Stack gap={{ base: "3rem", md: "0" }} w="full">
-        <CardBody w="full">
+      <Stack gap={{ base: "3rem", md: "0" }} w={{ base: "full", md: "50%" }}>
+        <CardBody>
           <Box>
             <Link
               as={NextLink}
