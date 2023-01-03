@@ -141,6 +141,7 @@ export default function ProjectCard(props: {
             <Link
               as={NextLink}
               href={props.demoLink}
+              target="_blank"
               _hover={{ textDecoration: "none" }}
             >
               Live Demo
