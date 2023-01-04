@@ -26,7 +26,7 @@ const Home = () => {
       overflow="hidden"
       gap="35vh"
       w="full"
-      px={{ base: "10vw", lg: "60%", xl: "25vw" }}
+      px={{ base: "10vw", lg: "20vw", xl: "25vw" }}
     >
       <Box pt="18vh" pb="15vh" textAlign="left" mr="auto">
         <Intro />

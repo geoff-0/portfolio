@@ -39,6 +39,8 @@ export default function Intro(props: any) {
             md: "60px",
             lg: "65px",
           }}
+          size="auto"
+          lineHeight="1.2"
           mb="2.5rem"
         >
           <Text>Geoffrey Perez,</Text>
