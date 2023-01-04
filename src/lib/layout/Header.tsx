@@ -58,7 +58,7 @@ const Header = () => {
             href="https://geoday.dev"
             _hover={{ textDecoration: "none" }}
             h="full"
-            scrollBehavior="smooth"
+            scroll={false}
             mt="-10px"
           >
             <Heading
