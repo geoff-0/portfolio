@@ -50,7 +50,7 @@ const Header = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{
             ease: "easeOut",
-            duration: 1,
+            duration: 0.5,
           }}
         >
           <Link
@@ -78,7 +78,7 @@ const Header = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{
             ease: "easeOut",
-            duration: 1,
+            duration: 0.5,
           }}
           style={{ marginLeft: "auto" }}
         >
