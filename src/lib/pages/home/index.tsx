@@ -29,23 +29,23 @@ const Home = () => {
       px={{ base: "10vw", lg: "20vw", xl: "25vw" }}
     >
       <Box pt="18vh" pb="15vh" textAlign="left" mr="auto">
-        <Intro />
+        <Intro pt="3rem" />
       </Box>
 
       <RenderSectionWrapper title={About.name}>
-        <About />
+        <About pt="5rem" />
       </RenderSectionWrapper>
 
       <RenderSectionWrapper title={TechStack.name}>
-        <TechStack />
+        <TechStack pt="5rem" />
       </RenderSectionWrapper>
 
       <RenderSectionWrapper title={Projects.name}>
-        <Projects />
+        <Projects pt="5rem" />
       </RenderSectionWrapper>
 
       <RenderSectionWrapper title={Contact.name}>
-        <Contact />
+        <Contact pt="5rem" />
       </RenderSectionWrapper>
     </Flex>
   );
