@@ -37,8 +37,10 @@ export default function RenderSectionWrapper(props: {
       transform={isVisible ? "translateX(0)" : "translateX(-100%)"}
       opacity={isVisible ? 1 : 0}
       filter={isVisible ? "blur(0)" : "blur(5px)"}
-      transition={calledOnce.current ? "0s" : "all 1s"}
+      transition={calledOnce.current ? "0s" : "all .7s"}
       ref={ref}
+      w="full"
+      {...props.styles}
     >
       {children}
     </Box>

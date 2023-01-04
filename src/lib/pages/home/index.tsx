@@ -26,25 +26,25 @@ const Home = () => {
       overflow="hidden"
       gap="35vh"
       w="full"
-      px={{ base: "10vw", lg: "60%", xl: "20vw" }}
+      px={{ base: "10vw", lg: "60%", xl: "25vw" }}
     >
       <Box pt="18vh" pb="15vh" textAlign="left" mr="auto">
         <Intro />
       </Box>
 
-      <RenderSectionWrapper title={About.name} styles={{ w: "full" }}>
+      <RenderSectionWrapper title={About.name}>
         <About />
       </RenderSectionWrapper>
 
-      <RenderSectionWrapper title={TechStack.name} styles={{ w: "full" }}>
+      <RenderSectionWrapper title={TechStack.name}>
         <TechStack />
       </RenderSectionWrapper>
 
-      <RenderSectionWrapper title={Projects.name} styles={{ w: "full" }}>
+      <RenderSectionWrapper title={Projects.name}>
         <Projects />
       </RenderSectionWrapper>
 
-      <RenderSectionWrapper title={Contact.name} styles={{ w: "full" }}>
+      <RenderSectionWrapper title={Contact.name}>
         <Contact />
       </RenderSectionWrapper>
     </Flex>

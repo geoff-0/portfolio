@@ -9,6 +9,7 @@ import {
   useColorMode,
   useDisclosure,
   Heading,
+  SlideFade,
 } from "@chakra-ui/react";
 
 import { useScrollDirection } from "lib/hooks/useScrollDirection";
@@ -44,26 +45,45 @@ const Header = () => {
         boxShadow={scrollPos == 0 ? "none" : colorMode == "light" ? "sm" : "xl"}
         transition=".5s ease-out, padding .4s ease-out"
       >
-        <Link
-          as={NextLink}
-          href="https://geoday.dev"
-          _hover={{ textDecoration: "none" }}
-          h="full"
-          scrollBehavior="smooth"
-          mt="-10px"
+        <MotionBox
+          initial={{ x: "-20vw", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            ease: "easeOut",
+            duration: 1,
+          }}
         >
-          <Heading
-            fontSize={{ base: "md", md: "lg" }}
-            letterSpacing="wide"
-            color={textColor}
-            _hover={{ color: "brand.primary" }}
-            transition=".2s ease-out"
+          <Link
+            as={NextLink}
+            href="https://geoday.dev"
+            _hover={{ textDecoration: "none" }}
+            h="full"
+            scrollBehavior="smooth"
+            mt="-10px"
           >
-            geoday.dev
-          </Heading>
-        </Link>
+            <Heading
+              fontSize={{ base: "md", md: "lg" }}
+              letterSpacing="wide"
+              color={textColor}
+              _hover={{ color: "brand.primary" }}
+              transition=".2s ease-out"
+            >
+              geoday.dev
+            </Heading>
+          </Link>
+        </MotionBox>
 
-        <NavItems />
+        <MotionBox
+          initial={{ x: "20vw", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            ease: "easeOut",
+            duration: 1,
+          }}
+          style={{ marginLeft: "auto" }}
+        >
+          <NavItems />
+        </MotionBox>
       </Flex>
     </Box>
   );
