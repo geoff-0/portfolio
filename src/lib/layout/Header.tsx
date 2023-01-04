@@ -48,6 +48,7 @@ const Header = () => {
           as={NextLink}
           href="https://geoday.dev"
           _hover={{ textDecoration: "none" }}
+          scroll={false}
           h="full"
           mt="-10px"
         >

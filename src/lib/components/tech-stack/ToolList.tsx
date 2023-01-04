@@ -48,7 +48,7 @@ export default function ToolList(props: any) {
   };
 
   return (
-    <SimpleGrid columns={{ base: 2, md: 3, lg: 6, xl: 8 }} {...props}>
+    <SimpleGrid columns={{ base: 2, md: 3, lg: 6, xl: 8 }} w="full" {...props}>
       {Object.keys(tools).map((k) => (
         <HoverImageLink
           key={nanoid()}

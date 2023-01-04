@@ -13,6 +13,7 @@ import Projects from "lib/components/sections/Projects";
 import TechStack from "lib/components/sections/TechStack";
 import About from "lib/components/sections/About";
 import Contact from "lib/components/sections/Contact";
+import RenderSectionWrapper from "lib/components/RenderSectionWrapper";
 
 const Home = () => {
   return (
@@ -22,23 +23,30 @@ const Home = () => {
       justifyContent="center"
       minHeight="70vh"
       mb={8}
-      w="full"
-      mx="auto"
       overflow="hidden"
+      gap="35vh"
+      w="full"
+      px={{ base: "10vw", lg: "60%", xl: "20vw" }}
     >
-      <Box w={{ base: "80%", lg: "75%", xl: "65%" }}>
-        <Box pt="18vh" pb="60vh" textAlign="left">
-          <Intro />
-        </Box>
-
-        <About py="5rem" />
-
-        <TechStack py="10rem" />
-
-        <Projects py="10rem" />
-
-        <Contact />
+      <Box pt="18vh" pb="15vh" textAlign="left" mr="auto">
+        <Intro />
       </Box>
+
+      <RenderSectionWrapper title={About.name} styles={{ w: "full" }}>
+        <About />
+      </RenderSectionWrapper>
+
+      <RenderSectionWrapper title={TechStack.name} styles={{ w: "full" }}>
+        <TechStack />
+      </RenderSectionWrapper>
+
+      <RenderSectionWrapper title={Projects.name} styles={{ w: "full" }}>
+        <Projects />
+      </RenderSectionWrapper>
+
+      <RenderSectionWrapper title={Contact.name} styles={{ w: "full" }}>
+        <Contact />
+      </RenderSectionWrapper>
     </Flex>
   );
 };

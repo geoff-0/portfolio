@@ -9,6 +9,7 @@ import {
   useColorMode,
   Link,
   useColorModeValue,
+  StyleConfig,
 } from "@chakra-ui/react";
 
 import NextLink from "next/link";
@@ -16,7 +17,7 @@ import NextLink from "next/link";
 import MailIcon from "lib/icons/MailIcon";
 import { useState } from "react";
 
-export default function Contact() {
+export default function Contact(props: any) {
   const { colorMode } = useColorMode();
 
   return (

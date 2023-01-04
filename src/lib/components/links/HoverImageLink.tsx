@@ -45,6 +45,7 @@ export default function HoverImageLink({
     <Tooltip
       label={tooltip ? label : ""}
       rounded="full"
+      w="full"
       bgColor={colorMode == "light" ? "background.dark" : "background.light"}
       color={colorMode == "light" ? "text.dark" : "text.light"}
     >
@@ -75,7 +76,7 @@ export default function HoverImageLink({
           />
 
           <Heading
-            size="md"
+            size="auto"
             fontWeight="semibold"
             display={tooltip ? "none" : "unset"}
             textAlign="center"
