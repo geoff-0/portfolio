@@ -55,7 +55,8 @@ const Header = () => {
         >
           <Link
             as={NextLink}
-            href="https://geoday.dev"
+            href="/"
+            onClick={() => scrollTo(0, 0)}
             _hover={{ textDecoration: "none" }}
             h="full"
             scroll={false}
@@ -64,7 +65,6 @@ const Header = () => {
             <Heading
               fontSize={{ base: "md", md: "lg" }}
               letterSpacing="wide"
-              color={textColor}
               _hover={{ color: "brand.primary" }}
               transition=".2s ease-out"
             >

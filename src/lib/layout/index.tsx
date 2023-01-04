@@ -24,7 +24,6 @@ const Layout = ({ children }: LayoutProps) => {
         bgColor={colorMode == "light" ? "background.light" : "background.dark"}
         minH="100vh"
         id="home"
-        scrollBehavior="smooth"
       >
         <Header />
         <Box as="main">{children}</Box>
