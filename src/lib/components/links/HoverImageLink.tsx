@@ -76,8 +76,7 @@ export default function HoverImageLink({
           />
 
           <Heading
-            fontSize="xl"
-            size="auto"
+            fontSize="auto"
             fontWeight="semibold"
             display={tooltip ? "none" : "unset"}
             textAlign="center"

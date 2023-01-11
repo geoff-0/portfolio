@@ -1,11 +1,5 @@
-import {
-  Image,
-  SimpleGrid,
-  useColorMode,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { SimpleGrid, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { nanoid } from "nanoid";
-import HoverLink from "../links/HoverIconLink";
 import HoverImageLink from "../links/HoverImageLink";
 
 export default function TechList(props: any) {
@@ -60,7 +54,13 @@ export default function TechList(props: any) {
   };
 
   return (
-    <SimpleGrid columns={{ base: 2, md: 3, lg: 6, xl: 8 }} {...props}>
+    <SimpleGrid
+      columns={{ base: 2, md: 3, lg: 6, xl: 8 }}
+      w="full"
+      py="3rem"
+      gap="4rem"
+      {...props}
+    >
       {Object.keys(technologies).map((k) => (
         <HoverImageLink
           key={nanoid()}
@@ -71,9 +71,6 @@ export default function TechList(props: any) {
           hoverColor={"brand.primary"}
           styles={{
             target: "_blank",
-            p: { base: "15px", md: "20px" },
-            w: "full",
-            h: "full",
           }}
           tooltip={false}
         />

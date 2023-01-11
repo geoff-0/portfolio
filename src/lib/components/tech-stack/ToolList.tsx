@@ -48,7 +48,12 @@ export default function ToolList(props: any) {
   };
 
   return (
-    <SimpleGrid columns={{ base: 2, md: 3, lg: 6, xl: 8 }} w="full" {...props}>
+    <SimpleGrid
+      columns={{ base: 2, md: 3, lg: 6, xl: 8 }}
+      w="full"
+      gap="1rem"
+      {...props}
+    >
       {Object.keys(tools).map((k) => (
         <HoverImageLink
           key={nanoid()}
@@ -59,7 +64,6 @@ export default function ToolList(props: any) {
           hoverColor={"brand.primary"}
           styles={{
             target: "_blank",
-            p: { base: "15px", md: "20px" },
             w: "full",
             h: "full",
           }}
