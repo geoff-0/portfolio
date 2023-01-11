@@ -58,7 +58,7 @@ export default function TechList(props: any) {
       columns={{ base: 2, md: 3, lg: 6, xl: 8 }}
       w="full"
       py="3rem"
-      gap="4rem"
+      gap="1rem"
       {...props}
     >
       {Object.keys(technologies).map((k) => (
@@ -71,6 +71,8 @@ export default function TechList(props: any) {
           hoverColor={"brand.primary"}
           styles={{
             target: "_blank",
+            w: "full",
+            h: "full",
           }}
           tooltip={false}
         />
