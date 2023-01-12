@@ -43,7 +43,7 @@ export default function TechList(props: any) {
     },
 
     MongoDB: {
-      img: "https://www.mongodb.com/assets/images/global/favicon.ico",
+      img: "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/erkxwhl1gd48xfhe2yld",
       href: "https://www.mongodb.com/assets",
     },
 
