@@ -50,6 +50,7 @@ export default function ToolList(props: any) {
   return (
     <SimpleGrid
       columns={{ base: 2, md: 3, lg: 6, xl: 8 }}
+      py="3rem"
       w="full"
       gap="1rem"
       {...props}
