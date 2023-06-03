@@ -1,19 +1,15 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  Heading,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import { LogoJsonLd, NextSeo } from "next-seo";
+import React from "react";
+import { Flex } from "@chakra-ui/react";
+import dynamic from "next/dynamic";
 
-import Intro from "lib/components/sections/Intro";
-import Projects from "lib/components/sections/Projects";
-import TechStack from "lib/components/sections/TechStack";
-import About from "lib/components/sections/About";
-import Contact from "lib/components/sections/Contact";
-import RenderSectionWrapper from "lib/components/RenderSectionWrapper";
+const Intro = dynamic(() => import("lib/components/sections/Intro"));
+const About = dynamic(() => import("lib/components/sections/About"));
+const TechStack = dynamic(() => import("lib/components/sections/TechStack"));
+const Projects = dynamic(() => import("lib/components/sections/Projects"));
+const Contact = dynamic(() => import("lib/components/sections/Contact"));
+const RenderSectionWrapper = dynamic(
+  () => import("lib/components/RenderSectionWrapper")
+);
 
 const Home = () => {
   return (
@@ -28,9 +24,7 @@ const Home = () => {
       w="full"
       px={{ base: "10vw", lg: "20vw" }}
     >
-      <Box h="full" pt="10vh" pb="15vh" textAlign="left" mr="auto">
-        <Intro pt="3rem" />
-      </Box>
+      <Intro pt="3rem" />
 
       <RenderSectionWrapper title={About.name}>
         <About pt="5rem" />
